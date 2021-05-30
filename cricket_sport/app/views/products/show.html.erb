@@ -1,19 +1,14 @@
 <h1><%= @product.name%></h1>
-<h5>$<%= @product.price/100.0%></h4>
+<h5>$<%= @product.price%></h4>
 
 <p> EDIT </p>
 <%= link_to edit_product_path(@product) do %> 
 <div class="edit-box">  
 </div>
 <% end %>
-
-<p> DESTROY </p>
-<div class="destroy-box">
+<p><%= link_to 'DESTROY', @product, method: :delete, data: {confirm: 'Are you sure?' } %> </p>
 
 
- <%= link_to 'destroy', @product, method: :delete, data: {confirm: 'Are you sure?' } %>
-
- </div>
 
 <% @product.ratings.each do |rating|%>
 <h5><%= rating.user.name%></h5>
