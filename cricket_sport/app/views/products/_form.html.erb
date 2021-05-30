@@ -7,26 +7,23 @@
 </ul>
 
 
-<%= form_with model: product do |form|%>
-<div>
-<%= form.label :name%>
+<%= form_with model: product, local: true, class:'m-4 product-form' do |form|%>
+<div class="mb-3">
+<%= form.label :name, class:"form-label"%>
 
 <%= form.text_field :name%>
 </div>
-<div>
-<%= form.label :description%>
-<%= form.text_field :description%>
+<div class="mb-3">
+<%= form.label :description, class:"form-label"%>
+<%= form.text_area :description, class:'form-control m-2 me-2'%>
 </div>
-<div>
-<%= form.label :price%>
-$<%= form.number_field :price, step: 0.01 %>
+<div class="mb-3">
+<%= form.label :price, class:"form-label"%>
+$<%= form.number_field :price, step: 0.01, class:'form-control m-2 me-2' %>
 </div>
-<div>
-<%= form.label :brand_id %>
-<%= form.select :brand_id, brands %>
+<div class="mb-3">
+<%= form.label :brand_id, class:"form-label" %>
+<%= form.collection_select(:brand_id, Brand.all, :id, :name, class:'form-control') %>
 </div>
 <%= form.submit%>
-
-
-
 <%end%>

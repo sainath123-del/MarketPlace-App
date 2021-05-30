@@ -1,12 +1,15 @@
 <h1><%= @product.name%></h1>
 <h5>$<%= @product.price%></h4>
 
-<p> EDIT </p>
-<%= link_to edit_product_path(@product) do %> 
-<div class="edit-box">  
-</div>
-<% end %>
-<p><%= link_to 'DESTROY', @product, method: :delete, data: {confirm: 'Are you sure?' } %> </p>
+<p> EDIT 
+<%= link_to edit_product_path(@product) do %>
+    <div class="edit-box">
+      <div class="circle"></div>
+    </div>
+  <% end %>
+  </p>
+  <p><%= link_to 'DESTROY', @product, method: :delete,
+              data: { confirm: 'Are you sure?' }, class:'btn btn-danger m-1' %></p>
 
 
 
