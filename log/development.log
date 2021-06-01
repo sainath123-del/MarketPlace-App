@@ -24834,3 +24834,31 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 5.1ms | Allocations: 13374)
 
 
+Started GET "/products" for ::1 at 2021-06-01 12:13:59 +1000
+  [1m[35m (45.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 5317)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.4ms | Allocations: 19930)
+Completed 200 OK in 140ms (Views: 114.7ms | ActiveRecord: 6.5ms | Allocations: 25502)
+
+
+Started GET "/products/new" for ::1 at 2021-06-01 12:14:05 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 396.9ms | Allocations: 348223)
+  Rendered products/new.html.erb within layouts/application (Duration: 398.2ms | Allocations: 348547)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 405.7ms | Allocations: 355374)
+Completed 200 OK in 423ms (Views: 406.2ms | ActiveRecord: 5.2ms | Allocations: 359471)
+
+
