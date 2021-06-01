@@ -1,0 +1,16 @@
+<h1>Products</h1>
+<ul>
+<% @products.each do |product|%>
+<li>
+<%= link_to product.name, product%>
+</li>
+<% end %>
+</ul>
+
+
+<%= link_to 'Add a new product', new_product_path, class:'btn btn-primary'  %>
+
+
+
+
+<a href="https://google.com", class="btn btn-secondary"> Google </a>
