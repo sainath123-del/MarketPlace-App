@@ -1,15 +1,17 @@
 <h1><%= @product.name%></h1>
 <h5>$<%= @product.price%></h4>
 
- <p> Edit
-<%= link_to edit_product_path(@product) do %> 
-    <div class="edit-box">
+ <p> 
+ <div>
+  <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+    <div class="edit-box"> 
     </div>
-  <% end %> 
-  </p>
+
+</div>
+  </p> 
   
-  <p><%= link_to 'DESTROY', @product, method: :delete,
-              data: { confirm: 'Are you sure?' }, class:'btn btn-danger m-1' %></p>
+  <%= link_to 'DESTROY', @product, method: :delete,
+        data: { confirm: 'Are you sure?' }, class:'btn btn-danger m-1' %>
 
 
 
