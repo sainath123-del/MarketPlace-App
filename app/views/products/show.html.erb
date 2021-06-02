@@ -1,6 +1,6 @@
 <h1><%= @product.name%></h1>
 <h5>$<%= @product.price%></h4>
-<%= image_tag 'GMBat.jpg' alt: 'Image of GM bat' %>
+<%= @product,image.attached? ? (image_tag @product.images.first, alt: 'Image of GM bat') : (image_tag 'GMBat.jpg', alt:'Default image of Bat') %>
  <p> 
  <div>
   <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
