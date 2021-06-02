@@ -30186,3 +30186,128 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.8ms | Allocations: 8563)
 
 
+Started GET "/" for ::1 at 2021-06-03 09:30:39 +1000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 1.1ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 16551)
+Completed 200 OK in 146ms (Views: 113.2ms | ActiveRecord: 2.0ms | Allocations: 24163)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 09:30:40 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 420.7ms | Allocations: 349231)
+  Rendered products/new.html.erb within layouts/application (Duration: 422.2ms | Allocations: 349549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 431.6ms | Allocations: 356583)
+Completed 200 OK in 456ms (Views: 432.3ms | ActiveRecord: 8.7ms | Allocations: 364295)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-06-03 09:30:44 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 9561)
+Completed 200 OK in 41ms (Views: 27.0ms | ActiveRecord: 3.2ms | Allocations: 14847)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 09:30:45 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 2.5ms | Allocations: 1860)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8923)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 1.0ms | Allocations: 10097)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-06-03 09:30:47 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 219)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5303)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5368)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 6571)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x00007ff8ac1432f8>):
+     5: 
+     6:      <div class="field">
+     7:     <%= f.label :username  %><br />
+     8:     <%= f.text_field :username, autofocus: true, autocomplete: "username " %>
+     9:   </div>
+    10:   
+    11:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:8
+app/views/devise/registrations/new.html.erb:3
+Started GET "/products/new" for ::1 at 2021-06-03 09:30:51 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 2.9ms | Allocations: 1986)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 9262)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.9ms | Allocations: 10633)
+
+
+Started GET "/" for ::1 at 2021-06-03 09:30:54 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 7868)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 1.1ms | Allocations: 8267)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 09:30:56 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 2.6ms | Allocations: 1853)
+  Rendered products/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 8996)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.9ms | Allocations: 10189)
+
+
