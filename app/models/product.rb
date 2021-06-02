@@ -5,6 +5,7 @@ class Product < ApplicationRecord
     has_many :product_orders, dependent: :destroy
     has_many :orders, through: :product_orders
     validates :name, :description, :price, presence: true  
+    has_many_attached :images  
 
     def average_rating
         
