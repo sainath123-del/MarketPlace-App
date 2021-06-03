@@ -59,3 +59,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "faker", "~> 2.18"
 
 gem "devise", "~> 4.8"
+
+gem "aws-sdk-s3", "~> 1.95"
