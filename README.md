@@ -18,3 +18,6 @@ The app which i am building is based on sports. I like to play one of the sport 
 <img width="527" alt="site map" src="https://user-images.githubusercontent.com/79548205/120629846-9435c100-c4a9-11eb-9ca9-91231c8820a7.png">
 
 <img width="641" alt="sechma 1" src="https://user-images.githubusercontent.com/79548205/120630047-c6472300-c4a9-11eb-871b-0ffb087cc618.png">
+
+
+<img width="582" alt="Schema 3" src="https://user-images.githubusercontent.com/79548205/120630153-e24ac480-c4a9-11eb-87e1-f21e6269073f.png">
