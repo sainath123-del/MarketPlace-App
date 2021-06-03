@@ -24,4 +24,3 @@ The app which i am building is based on sports. I like to play one of the sport 
 
 <img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
 
-<img width="434" alt="login page" src="https://user-images.githubusercontent.com/79548205/120630422-2f2e9b00-c4aa-11eb-985a-8b4485b7b63d.png">
