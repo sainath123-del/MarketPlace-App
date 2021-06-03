@@ -10,8 +10,13 @@
         </li>
         </ul>
         <div> 
+        <% if user_signed_in? %>
+        <%= current_user.name %>
+        <%= link_to 'Sign Out', destroy_user_session_path,method: :delete, class: 'btn btn-danger' %>
+        <% else %>
         <%= link_to 'Sign In', new_user_session_path, class:'btn btn-light' %>
         <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-light' %>
+        <% end %>
         </div>
     </div>
   </div>

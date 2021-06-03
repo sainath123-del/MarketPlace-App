@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
     has_many :ratings, dependent: :destroy 
-    belongs_to :user
+    # belongs_to :user
     belongs_to :brand
     has_many :product_orders, dependent: :destroy
     has_many :orders, through: :product_orders

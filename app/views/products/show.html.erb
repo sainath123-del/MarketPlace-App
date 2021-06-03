@@ -1,6 +1,9 @@
 <h1><%= @product.name%></h1>
 <h5>$<%= @product.price%></h4>
-<%= @product,image.attached? ? (image_tag @product.images.first, alt: 'Image of GM bat') : (image_tag 'GMBat.jpg', alt:'Default image of Bat') %>
+
+
+
+
  <p> 
  <div>
   <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
@@ -10,8 +13,8 @@
 </div>
   </p> 
   
-  <%= link_to 'DESTROY', @product, method: :delete,
-        data: { confirm: 'Are you sure?' }, class:'btn btn-danger m-1' %>
+  <%= button_to 'DESTROY', @product, method: :delete,
+        data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
 
 
 
