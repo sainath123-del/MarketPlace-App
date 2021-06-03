@@ -1,4 +1,4 @@
-![Uploading Screen Shot 2021-06-03 at 7.32.39 pm.png…]()
+
 ## T2A2 - Marketplace Project
   
 ### Link your GitHub repository
