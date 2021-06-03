@@ -1,16 +1,25 @@
-<h1><%= @product.name%></h1>
-<h5>$<%= @product.price%></h4>
+<h1> <%= @product.name%></h1>
 
 
 
 
- <p> 
+
+<%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+
+ <ul>
+ <li> <h5> Description: <%= @product.description %> </h5> </li>
+ <li><h5> price: $<%= @product.price%></h4> </li>
+ 
+ </ul>
+ 
+ 
+ 
+
  <div>
   <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
     <div class="edit-box"> 
     </div>
-
-</div>
+ </div>
   </p> 
   
   <%= button_to 'DESTROY', @product, method: :delete,

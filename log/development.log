@@ -38066,3 +38066,2302 @@ Processing by ProductsController#new as HTML
 Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 1.6ms | Allocations: 12963)
 
 
+Started GET "/products/new" for ::1 at 2021-06-03 13:34:22 +1000
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 402.0ms | Allocations: 349367)
+  Rendered products/new.html.erb within layouts/application (Duration: 404.0ms | Allocations: 349798)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 21.5ms | Allocations: 5838)
+  Rendered layout layouts/application.html.erb (Duration: 496.8ms | Allocations: 370679)
+Completed 200 OK in 553ms (Views: 495.6ms | ActiveRecord: 18.9ms | Allocations: 385208)
+
+
+Started GET "/" for ::1 at 2021-06-03 13:34:30 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 9073)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 2.4ms | Allocations: 9635)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:34:31 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:22
+  Rendered products/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 4818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 12596)
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 5.7ms | Allocations: 13950)
+
+
+Started GET "/products/22/edit" for ::1 at 2021-06-03 13:34:57 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 7.3ms | Allocations: 1926)
+  Rendered products/edit.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 10015)
+Completed 200 OK in 35ms (Views: 24.1ms | ActiveRecord: 4.7ms | Allocations: 11903)
+
+
+Started GET "/users/sign_out" for ::1 at 2021-06-03 13:35:23 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/products/22/edit" for ::1 at 2021-06-03 13:35:25 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 2.7ms | Allocations: 2020)
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1072)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 10176)
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 2.7ms | Allocations: 12094)
+
+
+Started GET "/" for ::1 at 2021-06-03 13:35:26 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.2ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 8859)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 2.1ms | Allocations: 9272)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 13:35:28 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/views/products/show.html.erb:22
+  Rendered products/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 8969)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 3.3ms | Allocations: 10069)
+
+
+Started GET "/" for ::1 at 2021-06-03 13:35:29 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 8844)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 2.1ms | Allocations: 9245)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:35:30 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:22
+  Rendered products/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 995)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8863)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 2.8ms | Allocations: 9962)
+
+
+Started GET "/" for ::1 at 2021-06-03 13:35:32 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 8844)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 2.2ms | Allocations: 9245)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:37:01 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:22
+  Rendered products/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 9698)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 3.2ms | Allocations: 11608)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:37:02 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:22
+  Rendered products/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 8869)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 2.6ms | Allocations: 9969)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:38:41 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3640)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3704)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms | Allocations: 5576)
+
+
+  
+ActionView::Template::Error (undefined method `rating' for #<Product:0x00007fb62d0114f0>
+Did you mean?  ratings
+               ratings=):
+    1: <h1><%= @product.name%></h1>
+    2: <h5>$<%= @product.price%></h4>
+    3: <p> <%= @product.description %> </p>
+    4: <p> <%= @product.rating %> </p>
+    5: 
+    6: 
+    7: <img src= "https://images.unsplash.com/photo-1599982946086-eb42d9e14eb8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1044&q=80" alt="Image of Bat">
+  
+app/views/products/show.html.erb:4
+Started GET "/products/22" for ::1 at 2021-06-03 13:38:52 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:23
+  Rendered products/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.9ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 9795)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 2.5ms | Allocations: 11696)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:39:27 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:25
+  Rendered products/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 9698)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 2.5ms | Allocations: 11593)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:39:44 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 9701)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 2.4ms | Allocations: 11598)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:40:33 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.9ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 9699)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 2.9ms | Allocations: 11594)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:40:44 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 9698)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 2.6ms | Allocations: 11593)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:43:53 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3959)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4023)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms | Allocations: 5896)
+
+
+  
+ActionView::Template::Error (The asset "GMBat.jpg" is not present in the asset pipeline.
+):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag 'GMBat.jpg' %>
+    8:  
+    9:  <p> Description: <%= @product.description %> </p>
+   10:  <h5>$<%= @product.price%></h4>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/22" for ::1 at 2021-06-03 13:44:30 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3677)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3741)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.5ms | Allocations: 4812)
+
+
+  
+ActionView::Template::Error (The asset "GMBat.jpg" is not present in the asset pipeline.
+):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag 'GMBat.jpg' %>
+    8:  
+    9:  <p> Description: <%= @product.description %> </p>
+   10:  <h5>$<%= @product.price%></h4>
+  
+app/views/products/show.html.erb:7
+Started GET "/" for ::1 at 2021-06-03 13:55:40 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 67.7ms | Allocations: 4589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 6.2ms | Allocations: 1509)
+  Rendered layout layouts/application.html.erb (Duration: 91.3ms | Allocations: 13478)
+Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 15.4ms | Allocations: 14682)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:55:42 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3948)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 4012)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 5213)
+
+
+  
+ActionView::Template::Error (The asset "GMBat.jpg" is not present in the asset pipeline.
+):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag 'GMBat.jpg' %>
+    8:  
+    9:  <p> Description: <%= @product.description %> </p>
+   10:  <h5>$<%= @product.price%></h4>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/22" for ::1 at 2021-06-03 13:59:13 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:25
+  Rendered products/show.html.erb within layouts/application (Duration: 57.3ms | Allocations: 19354)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 7.0ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 27636)
+Completed 200 OK in 92ms (Views: 84.1ms | ActiveRecord: 4.8ms | Allocations: 29537)
+
+
+Started GET "/" for ::1 at 2021-06-03 13:59:23 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 9024)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 1.9ms | Allocations: 9551)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 13:59:28 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:25
+  Rendered products/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 9310)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 2.5ms | Allocations: 10410)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:01:44 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:25
+  Rendered products/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.3ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 10166)
+Completed 200 OK in 34ms (Views: 27.9ms | ActiveRecord: 2.9ms | Allocations: 12061)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:02:14 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10167)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 2.6ms | Allocations: 12062)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:02:15 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 9318)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 2.7ms | Allocations: 10418)
+
+
+Started GET "/users/sign_out" for ::1 at 2021-06-03 14:02:47 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/products/22" for ::1 at 2021-06-03 14:02:49 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:26
+  Rendered products/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1529)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 9316)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 3.2ms | Allocations: 10414)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:04:25 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:28
+  Rendered products/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.5ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 10227)
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 2.8ms | Allocations: 12129)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:04:51 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:28
+  Rendered products/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1813)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.7ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10168)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 2.4ms | Allocations: 12063)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:05:08 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.6ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10172)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 2.5ms | Allocations: 12067)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:05:18 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 10171)
+Completed 200 OK in 22ms (Views: 16.4ms | ActiveRecord: 2.3ms | Allocations: 12066)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:05:36 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.5ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 10172)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 2.8ms | Allocations: 12067)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:06:03 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 5.2ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 10174)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 3.1ms | Allocations: 12069)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:06:24 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10261)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 2.6ms | Allocations: 12163)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:06:57 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:31
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 10175)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 2.5ms | Allocations: 12071)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:07:10 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:31
+  Rendered products/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 10202)
+Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 2.4ms | Allocations: 12097)
+
+
+Started GET "/products/22/edit" for ::1 at 2021-06-03 14:07:14 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 5.3ms | Allocations: 2292)
+  Rendered products/edit.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.2ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 10515)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 3.2ms | Allocations: 12381)
+
+
+Started GET "/products/22/edit" for ::1 at 2021-06-03 14:12:18 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 3.8ms | Allocations: 2278)
+  Rendered products/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 1232)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 11112)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 2.8ms | Allocations: 13654)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:12:20 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 9027)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 2.1ms | Allocations: 9554)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:12:21 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.5ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 9621)
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 2.8ms | Allocations: 10846)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:13:12 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 976)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 8856)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 2.2ms | Allocations: 9258)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8217603567930063405)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (43.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8217603567930063405)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-06-03 14:22:32 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 30.1ms | Allocations: 5778)
+  Rendered layout layouts/application.html.erb (Duration: 141.7ms | Allocations: 37109)
+Completed 200 OK in 177ms (Views: 131.9ms | ActiveRecord: 18.7ms | Allocations: 44546)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 14:22:34 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 400.7ms | Allocations: 349183)
+  Rendered products/new.html.erb within layouts/application (Duration: 402.3ms | Allocations: 349506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 412.2ms | Allocations: 357382)
+Completed 200 OK in 435ms (Views: 412.0ms | ActiveRecord: 6.7ms | Allocations: 361389)
+
+
+Started POST "/products" for ::1 at 2021-06-03 14:22:43 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF Genius Grand Edition 2.0 Senior", "description"=>"", "price"=>"200", "brand_id"=>"2"}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 6.7ms | Allocations: 3135)
+  Rendered products/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 8.3ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 11029)
+Completed 200 OK in 41ms (Views: 16.7ms | ActiveRecord: 9.0ms | Allocations: 16499)
+
+
+Started POST "/products" for ::1 at 2021-06-03 14:23:16 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF Genius Grand Edition 2.0 Senior", "description"=>"good", "price"=>"200", "brand_id"=>"2", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fa7e93020f8 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-65526-bmfy3k.jpg>, @original_filename="diego-ph-5LOhydOtTKU-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"diego-ph-5LOhydOtTKU-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (1.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "MRF Genius Grand Edition 2.0 Senior"], ["description", "good"], ["price", "200.0"], ["created_at", "2021-06-03 04:23:16.662279"], ["updated_at", "2021-06-03 04:23:16.662279"], ["brand_id", 2]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (42.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 23], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Blob Create (42.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "g2vmu4igx5llojqdvssnn4kiti84"], ["filename", "diego-ph-5LOhydOtTKU-unsplash.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 555072], ["checksum", "Ex/n0vfyBc+NtTmU91rJFw=="], ["created_at", "2021-06-03 04:23:16.727480"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 23], ["blob_id", 1], ["created_at", "2021-06-03 04:23:16.772781"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Update (1.4ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-03 04:23:16.775698"], ["id", 23]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[36m  Disk Storage (6.2ms) [0m[32mUploaded file to key: g2vmu4igx5llojqdvssnn4kiti84 (checksum: Ex/n0vfyBc+NtTmU91rJFw==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bd167f7b-0a4b-4172-be06-9a9507708c40) to Async(default) with arguments: #<GlobalID:0x00007fa7e77dabb8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/products/23
+Completed 302 Found in 236ms (ActiveRecord: 142.7ms | Allocations: 31597)
+
+
+Started GET "/products/23" for ::1 at 2021-06-03 14:23:16 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 11660)
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 4.1ms | Allocations: 12987)
+
+
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40] Performing ActiveStorage::AnalyzeJob (Job ID: bd167f7b-0a4b-4172-be06-9a9507708c40) from Async(default) enqueued at 2021-06-03T04:23:16Z with arguments: #<GlobalID:0x00007fa7e7710110 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40] [36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: g2vmu4igx5llojqdvssnn4kiti84[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40]   [1m[36mTRANSACTION (49.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bd167f7b-0a4b-4172-be06-9a9507708c40] Performed ActiveStorage::AnalyzeJob (Job ID: bd167f7b-0a4b-4172-be06-9a9507708c40) from Async(default) in 60.46ms
+Started GET "/" for ::1 at 2021-06-03 14:23:21 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8977)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 2.8ms | Allocations: 9390)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 14:23:23 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 9323)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 2.8ms | Allocations: 10427)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:23:27 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1016)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8907)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 2.2ms | Allocations: 9309)
+
+
+Started GET "/products/23" for ::1 at 2021-06-03 14:23:30 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 9392)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 2.4ms | Allocations: 10492)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:23:35 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1016)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8896)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 2.1ms | Allocations: 9297)
+
+
+Started GET "/products/23" for ::1 at 2021-06-03 14:23:36 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1528)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 9318)
+Completed 200 OK in 20ms (Views: 13.7ms | ActiveRecord: 2.9ms | Allocations: 10418)
+
+
+Started DELETE "/products/23" for ::1 at 2021-06-03 14:23:38 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"23"}
+  [1m[36mProduct Load (3.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProductOrder Load (45.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 23]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 23], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (1.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProduct Destroy (2.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 92268646-3cfb-479d-bdcd-bc194f18c173) to Async(default) with arguments: #<GlobalID:0x00007fa7ea1ef2c8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/products
+Completed 302 Found in 103ms (ActiveRecord: 64.6ms | Allocations: 10181)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173] Performing ActiveStorage::PurgeJob (Job ID: 92268646-3cfb-479d-bdcd-bc194f18c173) from Async(default) enqueued at 2021-06-03T04:23:38Z with arguments: #<GlobalID:0x00007fa7ea8312d0 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mActiveStorage::Attachment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 1], ["LIMIT", 1]]
+Started GET "/products" for ::1 at 2021-06-03 14:23:38 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mActiveStorage::VariantRecord Load (1.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 1]]
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  Rendered products/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2810)
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mActiveStorage::Blob Destroy (0.6ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.3ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 12128)
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173]   [1m[36mTRANSACTION (18.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 5.8ms | Allocations: 12549)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173] [36m  Disk Storage (0.7ms) [0m[31mDeleted file from key: g2vmu4igx5llojqdvssnn4kiti84[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/g2vmu4igx5llojqdvssnn4kiti84/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [92268646-3cfb-479d-bdcd-bc194f18c173] Performed ActiveStorage::PurgeJob (Job ID: 92268646-3cfb-479d-bdcd-bc194f18c173) from Async(default) in 44.58ms
+Started GET "/products" for ::1 at 2021-06-03 14:25:44 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.3ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 9584)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 2.1ms | Allocations: 10788)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 14:25:47 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4599)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4663)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.5ms | Allocations: 5865)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/21" for ::1 at 2021-06-03 14:27:15 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2568)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2632)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms | Allocations: 4658)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `to_model' for #<ActiveStorage::Attached::Many:0x00007fa7e717f4d0>
+Did you mean?  to_yaml):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/21" for ::1 at 2021-06-03 14:27:36 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4 OFFSET $5[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1], ["OFFSET", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2498)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2562)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.9ms | Allocations: 4434)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.second,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/21" for ::1 at 2021-06-03 14:29:32 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2403)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2467)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.1ms | Allocations: 4339)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products" for ::1 at 2021-06-03 14:29:34 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.5ms | Allocations: 1248)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 9847)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 2.2ms | Allocations: 10384)
+
+
+Started GET "/products" for ::1 at 2021-06-03 14:29:34 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 8861)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 1.9ms | Allocations: 9263)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:29:35 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2121)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2185)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms | Allocations: 3256)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products" for ::1 at 2021-06-03 14:33:19 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 8939)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 1.6ms | Allocations: 9340)
+
+
+Started GET "/users/sign_out" for ::1 at 2021-06-03 14:33:21 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+Started GET "/users/sign_out" for ::1 at 2021-06-03 14:44:18 +1000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2021-06-03 14:44:22 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 5331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 28.3ms | Allocations: 5800)
+  Rendered layout layouts/application.html.erb (Duration: 93.6ms | Allocations: 26554)
+Completed 200 OK in 118ms (Views: 76.2ms | ActiveRecord: 19.1ms | Allocations: 33428)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:44:22 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 978)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.5ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8861)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 2.3ms | Allocations: 9264)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:44:25 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 9038)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 2.1ms | Allocations: 9452)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 14:44:28 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 425.5ms | Allocations: 348767)
+  Rendered products/new.html.erb within layouts/application (Duration: 426.7ms | Allocations: 349090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 439.9ms | Allocations: 357043)
+Completed 200 OK in 453ms (Views: 439.4ms | ActiveRecord: 4.9ms | Allocations: 361068)
+
+
+Started POST "/products" for ::1 at 2021-06-03 14:45:14 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF", "description"=>"kid bat", "price"=>"100", "brand_id"=>"2", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fc8d5111f70 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-67219-1l92r4b.jpeg>, @original_filename="MRFGrandEdition2_small.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"MRFGrandEdition2_small.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (2.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "MRF"], ["description", "kid bat"], ["price", "100.0"], ["created_at", "2021-06-03 04:45:14.746567"], ["updated_at", "2021-06-03 04:45:14.746567"], ["brand_id", 2]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Blob Create (1.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "u8wlm7br1c404e7jpsg8ouzieuf0"], ["filename", "MRFGrandEdition2_small.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 1053], ["checksum", "YH+gJKmnGMcTBrN0dJNZ+g=="], ["created_at", "2021-06-03 04:45:14.767942"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 24], ["blob_id", 2], ["created_at", "2021-06-03 04:45:14.771247"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-03 04:45:14.773551"], ["id", 24]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[36m  Disk Storage (3.8ms) [0m[32mUploaded file to key: u8wlm7br1c404e7jpsg8ouzieuf0 (checksum: YH+gJKmnGMcTBrN0dJNZ+g==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 57c3c1b0-32bf-4ac4-b2dd-85fde81b9376) to Async(default) with arguments: #<GlobalID:0x00007fc8d522adf8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/products/24
+Completed 302 Found in 122ms (ActiveRecord: 58.3ms | Allocations: 30936)
+
+
+Started GET "/products/24" for ::1 at 2021-06-03 14:45:14 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (4.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376] Performing ActiveStorage::AnalyzeJob (Job ID: 57c3c1b0-32bf-4ac4-b2dd-85fde81b9376) from Async(default) enqueued at 2021-06-03T04:45:14Z with arguments: #<GlobalID:0x00007fc8d5263590 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: u8wlm7br1c404e7jpsg8ouzieuf0[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376] Skipping image analysis because the mini_magick gem isn't installed
+  [1m[36mRating Load (2.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/views/products/show.html.erb:30
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376]   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  Rendered products/show.html.erb within layouts/application (Duration: 19.1ms | Allocations: 9058)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 18333)
+Completed 200 OK in 37ms (Views: 23.9ms | ActiveRecord: 8.5ms | Allocations: 20118)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376]   [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [57c3c1b0-32bf-4ac4-b2dd-85fde81b9376] Performed ActiveStorage::AnalyzeJob (Job ID: 57c3c1b0-32bf-4ac4-b2dd-85fde81b9376) from Async(default) in 48.67ms
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96f89f34896d993fe9939c5484a4329a0ab285e6/MRFGrandEdition2_small.jpeg" for ::1 at 2021-06-03 14:45:14 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--96f89f34896d993fe9939c5484a4329a0ab285e6", "filename"=>"MRFGrandEdition2_small"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (2.5ms) [0m[34mGenerated URL for file at key: u8wlm7br1c404e7jpsg8ouzieuf0 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkVGgzYkcwM1luSXhZelF3TkdVM2FuQnpaemh2ZFhwcFpYVm1NQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUwOjE0LjkzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--407b2f471280e566fad0c8283c50aa2e0298d163/MRFGrandEdition2_small.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkVGgzYkcwM1luSXhZelF3TkdVM2FuQnpaemh2ZFhwcFpYVm1NQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUwOjE0LjkzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--407b2f471280e566fad0c8283c50aa2e0298d163/MRFGrandEdition2_small.jpeg
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms | Allocations: 1916)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkVGgzYkcwM1luSXhZelF3TkdVM2FuQnpaemh2ZFhwcFpYVm1NQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUwOjE0LjkzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--407b2f471280e566fad0c8283c50aa2e0298d163/MRFGrandEdition2_small.jpeg" for ::1 at 2021-06-03 14:45:14 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_small"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:45:43 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1033)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 8964)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 2.5ms | Allocations: 9366)
+
+
+Started GET "/products/24" for ::1 at 2021-06-03 14:45:44 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 10996)
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 4.9ms | Allocations: 12099)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkVGgzYkcwM1luSXhZelF3TkdVM2FuQnpaemh2ZFhwcFpYVm1NQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUwOjE0LjkzNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--407b2f471280e566fad0c8283c50aa2e0298d163/MRFGrandEdition2_small.jpeg" for ::1 at 2021-06-03 14:45:45 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_small"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/products/24/edit" for ::1 at 2021-06-03 14:45:45 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 3.1ms | Allocations: 1923)
+  Rendered products/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 10183)
+Completed 200 OK in 34ms (Views: 24.9ms | ActiveRecord: 4.1ms | Allocations: 12049)
+
+
+Started PATCH "/products/24" for ::1 at 2021-06-03 14:46:00 +1000
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF", "description"=>"kid bat", "price"=>"100.0", "brand_id"=>"2", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fc8d4e689b8 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-67219-q0dvfd.jpg>, @original_filename="cfphotosin-photography-HJbv998de9s-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"cfphotosin-photography-HJbv998de9s-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Product", "id"=>"24"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Destroy (1.2ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "534dfcr1wc6rgolvww8sfo4lk56t"], ["filename", "cfphotosin-photography-HJbv998de9s-unsplash.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 1264643], ["checksum", "af3ezx1Zv/2HadhuJffysg=="], ["created_at", "2021-06-03 04:46:00.172796"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 24], ["blob_id", 3], ["created_at", "2021-06-03 04:46:00.175551"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mProduct Update (0.8ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-03 04:46:00.177940"], ["id", 24]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mTRANSACTION (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:44:in `update'
+[36m  Disk Storage (8.9ms) [0m[32mUploaded file to key: 534dfcr1wc6rgolvww8sfo4lk56t (checksum: af3ezx1Zv/2HadhuJffysg==)[0m
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 5cdcaf73-a7f1-4499-b998-ec475376518c) to Async(default) with arguments: #<GlobalID:0x00007fc8d4dc1618 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/2>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9b487dda-9dcc-4d8a-b643-3179b96c0a51) to Async(default) with arguments: #<GlobalID:0x00007fc8d4db98a0 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/products/24
+Completed 302 Found in 99ms (ActiveRecord: 50.6ms | Allocations: 16348)
+
+
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c] Performing ActiveStorage::PurgeJob (Job ID: 5cdcaf73-a7f1-4499-b998-ec475376518c) from Async(default) enqueued at 2021-06-03T04:46:00Z with arguments: #<GlobalID:0x00007fc8d5860308 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mActiveStorage::Attachment Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+Started GET "/products/24" for ::1 at 2021-06-03 14:46:00 +1000
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mActiveStorage::VariantRecord Load (0.7ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 2]]
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"24"}
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mActiveStorage::Blob Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51] Performing ActiveStorage::AnalyzeJob (Job ID: 9b487dda-9dcc-4d8a-b643-3179b96c0a51) from Async(default) enqueued at 2021-06-03T04:46:00Z with arguments: #<GlobalID:0x00007fc8d5823458 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Blob Load (2.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/views/products/show.html.erb:30
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51] [36m  Disk Storage (3.4ms) [0m[34mDownloaded file from key: 534dfcr1wc6rgolvww8sfo4lk56t[0m
+  Rendered products/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4142)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 14370)
+Completed 200 OK in 40ms (Views: 29.8ms | ActiveRecord: 6.5ms | Allocations: 18123)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c]   [1m[36mTRANSACTION (41.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: u8wlm7br1c404e7jpsg8ouzieuf0[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/u8wlm7br1c404e7jpsg8ouzieuf0/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [5cdcaf73-a7f1-4499-b998-ec475376518c] Performed ActiveStorage::PurgeJob (Job ID: 5cdcaf73-a7f1-4499-b998-ec475376518c) from Async(default) in 65.42ms
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f316a292c2c35dcc5600c7af30cb3def0b52182d/cfphotosin-photography-HJbv998de9s-unsplash.jpg" for ::1 at 2021-06-03 14:46:00 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f316a292c2c35dcc5600c7af30cb3def0b52182d", "filename"=>"cfphotosin-photography-HJbv998de9s-unsplash"}
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: 534dfcr1wc6rgolvww8sfo4lk56t (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOVE0wWkdaamNqRjNZelp5WjI5c2RuZDNPSE5tYnpSc2F6VTJkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKalpuQm9iM1J2YzJsdUxYQm9iM1J2WjNKaGNHaDVMVWhLWW5ZNU9UaGtaVGx6TFhWdWMzQnNZWE5vTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMlp3YUc5MGIzTnBiaTF3YUc5MGIyZHlZWEJvZVMxSVNtSjJPVGs0WkdVNWN5MTFibk53YkdGemFDNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDNUMDQ6NTE6MDAuMzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--b79cb0d751ba98bd69d5b2d877356be98aa83cf3/cfphotosin-photography-HJbv998de9s-unsplash.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOVE0wWkdaamNqRjNZelp5WjI5c2RuZDNPSE5tYnpSc2F6VTJkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKalpuQm9iM1J2YzJsdUxYQm9iM1J2WjNKaGNHaDVMVWhLWW5ZNU9UaGtaVGx6TFhWdWMzQnNZWE5vTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMlp3YUc5MGIzTnBiaTF3YUc5MGIyZHlZWEJvZVMxSVNtSjJPVGs0WkdVNWN5MTFibk53YkdGemFDNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDNUMDQ6NTE6MDAuMzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--b79cb0d751ba98bd69d5b2d877356be98aa83cf3/cfphotosin-photography-HJbv998de9s-unsplash.jpg
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms | Allocations: 1598)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51]   [1m[36mTRANSACTION (53.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9b487dda-9dcc-4d8a-b643-3179b96c0a51] Performed ActiveStorage::AnalyzeJob (Job ID: 9b487dda-9dcc-4d8a-b643-3179b96c0a51) from Async(default) in 76.39ms
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOVE0wWkdaamNqRjNZelp5WjI5c2RuZDNPSE5tYnpSc2F6VTJkQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQVlScGJteHBibVU3SUdacGJHVnVZVzFsUFNKalpuQm9iM1J2YzJsdUxYQm9iM1J2WjNKaGNHaDVMVWhLWW5ZNU9UaGtaVGx6TFhWdWMzQnNZWE5vTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ZMlp3YUc5MGIzTnBiaTF3YUc5MGIyZHlZWEJvZVMxSVNtSjJPVGs0WkdVNWN5MTFibk53YkdGemFDNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjEtMDYtMDNUMDQ6NTE6MDAuMzUxWiIsInB1ciI6ImJsb2Jfa2V5In19--b79cb0d751ba98bd69d5b2d877356be98aa83cf3/cfphotosin-photography-HJbv998de9s-unsplash.jpg" for ::1 at 2021-06-03 14:46:00 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"cfphotosin-photography-HJbv998de9s-unsplash"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/products/24/edit" for ::1 at 2021-06-03 14:46:10 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:33:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 2.6ms | Allocations: 1894)
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9868)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 2.9ms | Allocations: 11608)
+
+
+Started PATCH "/products/24" for ::1 at 2021-06-03 14:46:43 +1000
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF", "description"=>"kid bat", "price"=>"100.0", "brand_id"=>"2", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fc8cef79cb8 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-67219-1qoglip.jpeg>, @original_filename="MRFGrandEdition2_small.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"MRFGrandEdition2_small.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Product", "id"=>"24"}
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mBrand Load (0.7ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "ilv1le8xg76aij0os7s66bko7xzq"], ["filename", "MRFGrandEdition2_small.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 1053], ["checksum", "YH+gJKmnGMcTBrN0dJNZ+g=="], ["created_at", "2021-06-03 04:46:43.671531"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mActiveStorage::Attachment Create (2.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 24], ["blob_id", 4], ["created_at", "2021-06-03 04:46:43.675200"]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mProduct Update (1.1ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-03 04:46:43.679947"], ["id", 24]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:44:in `update'
+[36m  Disk Storage (5.1ms) [0m[32mUploaded file to key: ilv1le8xg76aij0os7s66bko7xzq (checksum: YH+gJKmnGMcTBrN0dJNZ+g==)[0m
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:44:in `update'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 8481dc59-adcf-43b1-a23b-5843c647544e) to Async(default) with arguments: #<GlobalID:0x00007fc8d4ba3ac0 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/3>>
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ebf1da6e-8232-43ff-a369-a95f01024360) to Async(default) with arguments: #<GlobalID:0x00007fc8d4b9bf28 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/4>>
+Redirected to http://localhost:3000/products/24
+Completed 302 Found in 82ms (ActiveRecord: 52.5ms | Allocations: 14253)
+
+
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e] Performing ActiveStorage::PurgeJob (Job ID: 8481dc59-adcf-43b1-a23b-5843c647544e) from Async(default) enqueued at 2021-06-03T04:46:43Z with arguments: #<GlobalID:0x00007fc8d4b904e8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360] Performing ActiveStorage::AnalyzeJob (Job ID: ebf1da6e-8232-43ff-a369-a95f01024360) from Async(default) enqueued at 2021-06-03T04:46:43Z with arguments: #<GlobalID:0x00007fc8cef39460 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360] [36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: ilv1le8xg76aij0os7s66bko7xzq[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mActiveStorage::Attachment Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 3], ["LIMIT", 1]]
+Started GET "/products/24" for ::1 at 2021-06-03 14:46:43 +1000
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mActiveStorage::VariantRecord Load (0.8ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 3]]
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"24"}
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mActiveStorage::Blob Destroy (5.9ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 3]]
+  [1m[36mActiveStorage::Attachment Load (3.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4312)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.1ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 15335)
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 7.8ms | Allocations: 17421)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e]   [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: 534dfcr1wc6rgolvww8sfo4lk56t[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/534dfcr1wc6rgolvww8sfo4lk56t/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [8481dc59-adcf-43b1-a23b-5843c647544e] Performed ActiveStorage::PurgeJob (Job ID: 8481dc59-adcf-43b1-a23b-5843c647544e) from Async(default) in 61.54ms
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2966c530163e4c3de6c94ce9afea66f78a2d9bf0/MRFGrandEdition2_small.jpeg" for ::1 at 2021-06-03 14:46:43 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2966c530163e4c3de6c94ce9afea66f78a2d9bf0", "filename"=>"MRFGrandEdition2_small"}
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: ilv1le8xg76aij0os7s66bko7xzq (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3gyTVd4bE9IaG5OelpoYVdvd2IzTTNjelkyWW10dk4zaDZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUxOjQzLjg0NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1116ecacf5f06f23cd5f40d27add37cea6e3836/MRFGrandEdition2_small.jpeg)[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360]   [1m[36mTRANSACTION (58.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3gyTVd4bE9IaG5OelpoYVdvd2IzTTNjelkyWW10dk4zaDZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUxOjQzLjg0NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1116ecacf5f06f23cd5f40d27add37cea6e3836/MRFGrandEdition2_small.jpeg
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebf1da6e-8232-43ff-a369-a95f01024360] Performed ActiveStorage::AnalyzeJob (Job ID: ebf1da6e-8232-43ff-a369-a95f01024360) from Async(default) in 101.31ms
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms | Allocations: 2188)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3gyTVd4bE9IaG5OelpoYVdvd2IzTTNjelkyWW10dk4zaDZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmYzIxaGJHd3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw5emJXRnNiQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUxOjQzLjg0NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c1116ecacf5f06f23cd5f40d27add37cea6e3836/MRFGrandEdition2_small.jpeg" for ::1 at 2021-06-03 14:46:43 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_small"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started DELETE "/products/24" for ::1 at 2021-06-03 14:46:48 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"24"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProductOrder Load (1.0ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 24]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 24], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 31dd9ce2-b657-430f-9e79-b72478b1e3c5) to Async(default) with arguments: #<GlobalID:0x00007fc8d53eb660 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/4>>
+Redirected to http://localhost:3000/products
+Completed 302 Found in 77ms (ActiveRecord: 54.6ms | Allocations: 9939)
+
+
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5] Performing ActiveStorage::PurgeJob (Job ID: 31dd9ce2-b657-430f-9e79-b72478b1e3c5) from Async(default) enqueued at 2021-06-03T04:46:48Z with arguments: #<GlobalID:0x00007fc8d4da9d10 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mActiveStorage::Attachment Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+Started GET "/products" for ::1 at 2021-06-03 14:46:48 +1000
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mActiveStorage::VariantRecord Load (1.9ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = $1[0m  [["blob_id", 4]]
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1778)
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mActiveStorage::Blob Destroy (1.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 10420)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 2.5ms | Allocations: 10825)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5]   [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: ilv1le8xg76aij0os7s66bko7xzq[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/ilv1le8xg76aij0os7s66bko7xzq/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [31dd9ce2-b657-430f-9e79-b72478b1e3c5] Performed ActiveStorage::PurgeJob (Job ID: 31dd9ce2-b657-430f-9e79-b72478b1e3c5) from Async(default) in 61.34ms
+Started GET "/products/22" for ::1 at 2021-06-03 14:47:11 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2181)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms | Allocations: 3257)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/22" for ::1 at 2021-06-03 14:47:18 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2119)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2183)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.7ms | Allocations: 3255)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products" for ::1 at 2021-06-03 14:47:20 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.9ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 9016)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 2.2ms | Allocations: 9418)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 14:47:21 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2181)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 3252)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products" for ::1 at 2021-06-03 14:47:23 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 9016)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 2.7ms | Allocations: 9417)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 14:47:24 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 7.3ms | Allocations: 1853)
+  Rendered products/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 9825)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 2.1ms | Allocations: 11002)
+
+
+Started POST "/products" for ::1 at 2021-06-03 14:47:44 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Ball", "description"=>"good", "price"=>"100", "brand_id"=>"2", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fc8d53577d0 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-67219-4jeyt.jpeg>, @original_filename="MRFGrandEdition2_1024x1024@2x.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"MRFGrandEdition2_1024x1024@2x.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (1.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ball"], ["description", "good"], ["price", "100.0"], ["created_at", "2021-06-03 04:47:44.096098"], ["updated_at", "2021-06-03 04:47:44.096098"], ["brand_id", 2]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (3.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "ijlned17wv9v7ifgd8txgkeoolc6"], ["filename", "MRFGrandEdition2_1024x1024@2x.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 80953], ["checksum", "j9IYhjmSjlQ/KU2Waj6U7Q=="], ["created_at", "2021-06-03 04:47:44.105335"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 25], ["blob_id", 5], ["created_at", "2021-06-03 04:47:44.108251"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Update (1.0ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-03 04:47:44.111162"], ["id", 25]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[36m  Disk Storage (4.8ms) [0m[32mUploaded file to key: ijlned17wv9v7ifgd8txgkeoolc6 (checksum: j9IYhjmSjlQ/KU2Waj6U7Q==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55) to Async(default) with arguments: #<GlobalID:0x00007fc8d540eea8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/5>>
+Redirected to http://localhost:3000/products/25
+Completed 302 Found in 74ms (ActiveRecord: 52.1ms | Allocations: 11997)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55] Performing ActiveStorage::AnalyzeJob (Job ID: 5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55) from Async(default) enqueued at 2021-06-03T04:47:44Z with arguments: #<GlobalID:0x00007fc8d4e497e8 @uri=#<URI::GID gid://cricket-sport/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55] [36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: ijlned17wv9v7ifgd8txgkeoolc6[0m
+Started GET "/products/25" for ::1 at 2021-06-03 14:47:44 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3437)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55] Performed ActiveStorage::AnalyzeJob (Job ID: 5ae52e57-a74f-42b9-8c0c-f2eb4ceb8a55) from Async(default) in 62.17ms
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.2ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 14854)
+Completed 200 OK in 61ms (Views: 51.9ms | ActiveRecord: 6.2ms | Allocations: 16370)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6369b10de0fe2e284b7bf4fc89873ee5d1e0d9d2/MRFGrandEdition2_1024x1024@2x.jpeg" for ::1 at 2021-06-03 14:47:44 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6369b10de0fe2e284b7bf4fc89873ee5d1e0d9d2", "filename"=>"MRFGrandEdition2_1024x1024@2x"}
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: ijlned17wv9v7ifgd8txgkeoolc6 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3BzYm1Wa01UZDNkamwyTjJsbVoyUTRkSGhuYTJWdmIyeGpOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmTVRBeU5IZ3hNREkwSlRRd01uZ3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw4eE1ESTBlREV3TWpRbE5EQXllQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUyOjQ0LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dd70498b54de36d1e283916dbcf4ff845bbf07ab/MRFGrandEdition2_1024x1024@2x.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3BzYm1Wa01UZDNkamwyTjJsbVoyUTRkSGhuYTJWdmIyeGpOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmTVRBeU5IZ3hNREkwSlRRd01uZ3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw4eE1ESTBlREV3TWpRbE5EQXllQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUyOjQ0LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dd70498b54de36d1e283916dbcf4ff845bbf07ab/MRFGrandEdition2_1024x1024@2x.jpeg
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 1613)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3BzYm1Wa01UZDNkamwyTjJsbVoyUTRkSGhuYTJWdmIyeGpOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmTVRBeU5IZ3hNREkwSlRRd01uZ3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw4eE1ESTBlREV3TWpRbE5EQXllQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUyOjQ0LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dd70498b54de36d1e283916dbcf4ff845bbf07ab/MRFGrandEdition2_1024x1024@2x.jpeg" for ::1 at 2021-06-03 14:47:44 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_1024x1024@2x"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:47:54 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.0ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 8894)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 2.0ms | Allocations: 9295)
+
+
+Started GET "/products/25" for ::1 at 2021-06-03 14:47:56 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 16.3ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 10987)
+Completed 200 OK in 39ms (Views: 31.4ms | ActiveRecord: 4.4ms | Allocations: 12086)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3BzYm1Wa01UZDNkamwyTjJsbVoyUTRkSGhuYTJWdmIyeGpOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmTVRBeU5IZ3hNREkwSlRRd01uZ3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw4eE1ESTBlREV3TWpRbE5EQXllQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUyOjQ0LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dd70498b54de36d1e283916dbcf4ff845bbf07ab/MRFGrandEdition2_1024x1024@2x.jpeg" for ::1 at 2021-06-03 14:47:56 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_1024x1024@2x"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:47:57 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8895)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 2.7ms | Allocations: 9296)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:47:58 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2181)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.8ms | Allocations: 3252)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/" for ::1 at 2021-06-03 14:48:00 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 9056)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.9ms | Allocations: 9457)
+
+
+Started GET "/products/25" for ::1 at 2021-06-03 14:48:01 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3108)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.1ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 10987)
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 4.7ms | Allocations: 12086)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhV3BzYm1Wa01UZDNkamwyTjJsbVoyUTRkSGhuYTJWdmIyeGpOZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpYzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWsxU1JrZHlZVzVrUldScGRHbHZiakpmTVRBeU5IZ3hNREkwSlRRd01uZ3VhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblRWSkdSM0poYm1SRlpHbDBhVzl1TWw4eE1ESTBlREV3TWpRbE5EQXllQzVxY0dWbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRNkVYTmxjblpwWTJWZmJtRnRaVG9LYkc5allXdz0iLCJleHAiOiIyMDIxLTA2LTAzVDA0OjUyOjQ0LjI3MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--dd70498b54de36d1e283916dbcf4ff845bbf07ab/MRFGrandEdition2_1024x1024@2x.jpeg" for ::1 at 2021-06-03 14:48:01 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"MRFGrandEdition2_1024x1024@2x"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/" for ::1 at 2021-06-03 14:48:05 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 1.9ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 8895)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 2.2ms | Allocations: 9296)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:48:19 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2181)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.7ms | Allocations: 3252)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/22" for ::1 at 2021-06-03 14:48:22 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2117)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2181)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms | Allocations: 3251)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/" for ::1 at 2021-06-03 14:54:17 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 4604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 7.4ms | Allocations: 1493)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 13476)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 12.7ms | Allocations: 14680)
+
+
+Started GET "/products/22" for ::1 at 2021-06-03 14:54:22 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  Rendered products/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2424)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2488)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.6ms | Allocations: 3689)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    4: 
+    5: 
+    6: 
+    7: <%= image_tag @product.images.first,  alt:'Image of Bat' %>
+    8: 
+    9:  <ul>
+   10:  <li> <h5> Description: <%= @product.description %> </h5> </li>
+  
+app/views/products/show.html.erb:7
+Started GET "/products/22" for ::1 at 2021-06-03 14:57:28 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 5.9ms | Allocations: 1236)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 11370)
+Completed 200 OK in 40ms (Views: 32.1ms | ActiveRecord: 4.8ms | Allocations: 13265)
+
+
+Started DELETE "/products/22" for ::1 at 2021-06-03 14:57:36 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProductOrder Load (0.8ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProduct Destroy (1.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 18ms (ActiveRecord: 7.0ms | Allocations: 5628)
+
+
+Started GET "/products" for ::1 at 2021-06-03 14:57:36 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 8.4ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 9021)
+Completed 200 OK in 29ms (Views: 19.7ms | ActiveRecord: 8.0ms | Allocations: 9548)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 14:57:40 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 3.1ms | Allocations: 2234)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2547)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.9ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10433)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 2.6ms | Allocations: 11736)
+
+
+Started GET "/" for ::1 at 2021-06-03 15:05:42 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 71.8ms | Allocations: 4358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 5.2ms | Allocations: 1268)
+  Rendered layout layouts/application.html.erb (Duration: 98.7ms | Allocations: 12498)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 60.3ms | Allocations: 12900)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 15:05:43 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2559)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 10349)
+Completed 200 OK in 32ms (Views: 21.8ms | ActiveRecord: 5.6ms | Allocations: 11452)
+
+
+Started GET "/" for ::1 at 2021-06-03 15:11:04 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 9580)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 2.0ms | Allocations: 10782)
+
+
+Started GET "/users/sign_out" for ::1 at 2021-06-03 15:11:06 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2021-06-03 15:18:19 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 67.9ms | Allocations: 4486)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 7.0ms | Allocations: 1493)
+  Rendered layout layouts/application.html.erb (Duration: 92.2ms | Allocations: 13333)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 57.9ms | Allocations: 14536)
+
+
+Started GET "/products/21" for ::1 at 2021-06-03 15:18:21 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2847)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 10644)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 6.5ms | Allocations: 11873)
+
+
+Started GET "/" for ::1 at 2021-06-03 15:18:25 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1008)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 8855)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 1.8ms | Allocations: 9257)
+
+
