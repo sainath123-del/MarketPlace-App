@@ -168,6 +168,9 @@ User must have a valid email for signup. user can't use one email for two accoun
 <img width="641" alt="sechma 1" src="https://user-images.githubusercontent.com/79548205/120630047-c6472300-c4a9-11eb-871b-0ffb087cc618.png">
 
 
+<img width="1409" alt="Screen Shot 2021-06-03 at 10 20 31 pm" src="https://user-images.githubusercontent.com/79548205/120643830-fbf40800-c4b9-11eb-94d6-f66edbfe60ad.png">
+
+
 <img width="582" alt="Schema 3" src="https://user-images.githubusercontent.com/79548205/120630153-e24ac480-c4a9-11eb-87e1-f21e6269073f.png">
 
 
