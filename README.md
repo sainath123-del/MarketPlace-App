@@ -36,7 +36,8 @@ This app is two sided marketplace app where user can sell their product and buy 
 
 - Screenshots
   
-<img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
+
+<img width="589" alt="Home page" src="https://user-images.githubusercontent.com/79548205/120635642-0d381700-c4b0-11eb-8b97-041ff011d067.png">
 
 
 
@@ -77,14 +78,11 @@ This app is two sided marketplace app where user can sell their product and buy 
 
 
  
+ <img width="434" alt="login page" src="https://user-images.githubusercontent.com/79548205/120635722-26d95e80-c4b0-11eb-8aa4-f99a002cdd22.png">
+ <img width="629" alt="Add Product" src="https://user-images.githubusercontent.com/79548205/120635668-16c17f00-c4b0-11eb-8f05-88a01b953e8c.png">
+ <img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
  
  
- 
- 
-
-
-
-
 
 
 
