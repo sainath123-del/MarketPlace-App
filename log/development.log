@@ -40718,3 +40718,47 @@ Started GET "/users/sign_out" for ::1 at 2021-06-03 16:26:06 +1000
   
 ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
   
+Started GET "/products" for ::1 at 2021-06-03 17:10:06 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 5179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 24.7ms | Allocations: 5777)
+  Rendered layout layouts/application.html.erb (Duration: 122.9ms | Allocations: 26375)
+Completed 200 OK in 152ms (Views: 111.3ms | ActiveRecord: 16.6ms | Allocations: 33812)
+
+
+Started GET "/products/new" for ::1 at 2021-06-03 17:10:09 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 391.1ms | Allocations: 348729)
+  Rendered products/new.html.erb within layouts/application (Duration: 392.5ms | Allocations: 349047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.8ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 403.8ms | Allocations: 357000)
+Completed 200 OK in 423ms (Views: 403.4ms | ActiveRecord: 6.0ms | Allocations: 360987)
+
+
+Started POST "/products" for ::1 at 2021-06-03 17:13:30 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF BAT ", "description"=>"MRF Genius Unique Edition Shikhar Dhawan Cricket Bat is made with grade 1+ English willow which furnishes you extraordinary execution with strength.", "price"=>"600", "brand_id"=>"1", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007ffe5f176848 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210603-78541-47184i.jpeg>, @original_filename="MRF.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"MRF.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5274)
+
+
+  
+KeyError (Missing configuration for the amazon Active Storage service. Configurations available for the test and local services.):
+  
+app/controllers/products_controller.rb:18:in `create'
