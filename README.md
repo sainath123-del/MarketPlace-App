@@ -83,13 +83,70 @@ This app is two sided marketplace app where user can sell their product and buy 
  <img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
  
  
+ 
+ ## An ERD for your app
+
+ 
+ <img width="729" alt="Screen Shot 2021-06-03 at 9 33 21 pm" src="https://user-images.githubusercontent.com/79548205/120638382-63f32000-c4b3-11eb-813c-b7bf1a5beb14.png">
+ 
+ 
+ ## Explain the different high-level components (abstractions) in your app
+ The model, views and controllers are efficient in creating a facade of logical workflow for the user. When a user accesses the site they are only seeing the graphical user interface represented by the views module. However, in reality when for example they post a new product they are altering the PostgreSQL database handled via the model. The user cannot achieve any of these tasks without the controller module providing the site with visible functionality. The controller is the middle man for the model and views modules and when programmed correctly vastly enhances a user’s experience. Overall, the MVC architecture divides complex tasks into more manageable sections that all work harmoniously with one another. On their own, the models, views and controllers would be practically useless to the user.
+
+Another abstraction used within the Cricket app is the Devise Ruby gem. This gem validates a user's credentials which are then used to provide authorization to certain pages of the site depending on their admin rights. 
+The Devise gem itself does not discriminate between a buyer and a seller; this is in fact handled by the controller. An example of this would be permission rights to edit and delete a product. Each individual Product corresponds with the user’s ID who created the post. Only the creator can edit the listing and for everyone else registered on the database can only view the product, purchase the product or contact the seller. These personalised authorizations are considered a high-level component as the user is unaware of the deep logic behind how their credentials are altering their overall experience with the site.
+
+ 
+## Third party services used
+# AWS 
+ AWS S3 is an amazon sever used to store the data or images
+# Postgresql 
+Postgresql is used for to store the data in datbase management system
+# Bootstrap 
+Bootstrap is used for to create a responsive web site design by using Nav bar, html and css
+# Devise
+This is used for encrpt the password 
+
+ 
 
 
+## Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+The useer models have there user name and email is important for to signup
+    t.string "name"
+    t.string "email"
+    
+Adding brand to products for so user can add the brand of the product
+
+class AddBrandRefToProducts < ActiveRecord::Migration[6.1]
+  def change
+    add_reference :products, :brand, null: false, foreign_key: true
+  end
+end
 
 
+Only signed in user can see the products details, if user want to sell their product they must need to fill name, description and price
 
 
+class CreateProducts < ActiveRecord::Migration[6.1]
+  def change
+    create_table :products do |t|
+      t.string :name
+      t.text :description
+      t.integer :price
 
+      t.timestamps
+    end
+  end
+end
+
+User must have a valid email for signup. user can't use one email for two account
+   
+   validates  :email, presence: true
+   validates :email, uniqueness: true
+
+
+## Database Schema Design
 
 <img width="641" alt="sechma 1" src="https://user-images.githubusercontent.com/79548205/120630047-c6472300-c4a9-11eb-871b-0ffb087cc618.png">
 
