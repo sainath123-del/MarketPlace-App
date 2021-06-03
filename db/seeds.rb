@@ -6,13 +6,17 @@ Order.destroy_all
 puts 'Deleted data'
 
 User.create(name: 'Ajay',
-    email: 'Ajay@gmail.com')
-User.create(name: 'Ash',
-    email: 'Ash@gmail.com')
+    email: 'Ajay@gmail.com',
+    passsword: 'ajay')
+User.create(name:'Ash',
+    email: 'Ash@gmail.com',
+    passsword:'ajay')
 User.create(name: 'akash',
-    email: 'Akash@gmail.com')
+    email: 'Akash@gmail.com',
+    passsword: 'ajay')
 User.create(name: 'yash',
-    email: 'Yash@gmail.com')
+    email: 'Yash@gmail.com',
+     passsword:'ajay')
 
 puts 'User Created'
 
