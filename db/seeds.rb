@@ -5,14 +5,14 @@ Brand.destroy_all
 Order.destroy_all
 puts 'Deleted data'
 
-User.create(name: 'Ajay',
-    email: 'Ajay@gmail.com')
-User.create(name:'Ash',
-    email: 'Ash@gmail.com')
-User.create(name: 'akash',
-    email: 'Akash@gmail.com')
-User.create(name: 'yash',
-    email: 'Yash@gmail.com')
+# User.create(name: 'Ajay',
+#     email: 'Ajay@gmail.com')
+# User.create(name:'Ash',
+#     email: 'Ash@gmail.com')
+# User.create(name: 'akash',
+#     email: 'Akash@gmail.com')
+# User.create(name: 'yash',
+#     email: 'Yash@gmail.com')
 
 puts 'User Created'
 

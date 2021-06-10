@@ -61,3 +61,5 @@ gem "faker", "~> 2.18"
 gem "devise", "~> 4.8"
 
 gem "aws-sdk-s3", "~> 1.95"
+
+gem "stripe", "~> 5.34"

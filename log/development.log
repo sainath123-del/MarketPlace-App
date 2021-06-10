@@ -43985,3 +43985,1687 @@ Migrating to DropUser (20210610085259)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8217603567930063405)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8217603567930063405)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8217603567930063405)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products/new" for ::1 at 2021-06-10 19:21:20 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (42.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 465.0ms | Allocations: 348753)
+  Rendered products/new.html.erb within layouts/application (Duration: 467.4ms | Allocations: 349184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (25.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 38.5ms | Allocations: 3128)
+  Rendered layout layouts/application.html.erb (Duration: 608.6ms | Allocations: 367628)
+Completed 200 OK in 698ms (Views: 583.8ms | ActiveRecord: 77.9ms | Allocations: 380160)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (112.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cricket_sport_development"[0m
+  [1m[35m (56.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cricket_sport_test"[0m
+  [1m[35m (206.2ms)[0m  [1m[35mCREATE DATABASE "cricket_sport_development" ENCODING = 'unicode'[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCREATE DATABASE "cricket_sport_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "brands" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_orders" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "product_orders" ("id" bigserial primary key, "order_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_order_id" ON "product_orders" ("order_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_product_id" ON "product_orders" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" decimal(8,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "brand_id" bigint NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ratings" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" bigserial primary key, "rating" integer, "review" text, "user_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_product_id" ON "ratings" ("product_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_user_id" ON "ratings" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "status" integer, "password_digest" character varying, "encrypted_password" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_72071d5a6c"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_14f14aa898"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_f846e598a7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_a7dfeb9f5f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210610085259)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210529021851),
+(20210529022655),
+(20210529040554),
+(20210529041429),
+(20210529041704),
+(20210529072205),
+(20210529074006),
+(20210529074133),
+(20210530055459),
+(20210603000004),
+(20210610065649),
+(20210610070418);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-10 09:25:10.922406"], ["updated_at", "2021-06-10 09:25:10.922406"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "10a9f6be5d4632e5b86430fa6b70027ddb50c935"], ["created_at", "2021-06-10 09:25:10.929714"], ["updated_at", "2021-06-10 09:25:10.929714"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "brands" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_orders" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "product_orders" ("id" bigserial primary key, "order_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_order_id" ON "product_orders" ("order_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_product_id" ON "product_orders" ("product_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" decimal(8,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "brand_id" bigint NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ratings" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" bigserial primary key, "rating" integer, "review" text, "user_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_product_id" ON "ratings" ("product_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_user_id" ON "ratings" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "status" integer, "password_digest" character varying, "encrypted_password" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_72071d5a6c"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_14f14aa898"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_f846e598a7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_a7dfeb9f5f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210610085259)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210529021851),
+(20210529022655),
+(20210529040554),
+(20210529041429),
+(20210529041704),
+(20210529072205),
+(20210529074006),
+(20210529074133),
+(20210530055459),
+(20210603000004),
+(20210610065649),
+(20210610070418);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-10 09:25:11.105972"], ["updated_at", "2021-06-10 09:25:11.105972"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-06-10 09:25:11.111054"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "10a9f6be5d4632e5b86430fa6b70027ddb50c935"], ["created_at", "2021-06-10 09:25:11.116223"], ["updated_at", "2021-06-10 09:25:11.116223"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand0"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.6ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand0"], ["created_at", "2021-06-10 09:25:11.191052"], ["updated_at", "2021-06-10 09:25:11.191052"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.224523"], ["updated_at", "2021-06-10 09:25:11.224523"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.250847"], ["updated_at", "2021-06-10 09:25:11.250847"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.256227"], ["updated_at", "2021-06-10 09:25:11.256227"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.261574"], ["updated_at", "2021-06-10 09:25:11.261574"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.265934"], ["updated_at", "2021-06-10 09:25:11.265934"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand1"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand1"], ["created_at", "2021-06-10 09:25:11.272143"], ["updated_at", "2021-06-10 09:25:11.272143"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.275025"], ["updated_at", "2021-06-10 09:25:11.275025"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.278885"], ["updated_at", "2021-06-10 09:25:11.278885"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.282754"], ["updated_at", "2021-06-10 09:25:11.282754"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.286627"], ["updated_at", "2021-06-10 09:25:11.286627"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.290529"], ["updated_at", "2021-06-10 09:25:11.290529"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand2"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand2"], ["created_at", "2021-06-10 09:25:11.302393"], ["updated_at", "2021-06-10 09:25:11.302393"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.305755"], ["updated_at", "2021-06-10 09:25:11.305755"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.309943"], ["updated_at", "2021-06-10 09:25:11.309943"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.313598"], ["updated_at", "2021-06-10 09:25:11.313598"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.317420"], ["updated_at", "2021-06-10 09:25:11.317420"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.321228"], ["updated_at", "2021-06-10 09:25:11.321228"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand3"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand3"], ["created_at", "2021-06-10 09:25:11.326898"], ["updated_at", "2021-06-10 09:25:11.326898"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.330041"], ["updated_at", "2021-06-10 09:25:11.330041"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.333661"], ["updated_at", "2021-06-10 09:25:11.333661"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.337492"], ["updated_at", "2021-06-10 09:25:11.337492"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.341352"], ["updated_at", "2021-06-10 09:25:11.341352"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:11.345042"], ["updated_at", "2021-06-10 09:25:11.345042"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mProductOrder Load (0.3ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (40.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mProductOrder Load (0.2ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 2], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 3]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 3]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 3], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 4]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 4]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 4], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 5]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 5]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 5], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 6]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 6]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 6], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 7]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 7]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 7], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 8]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 8]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 8], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 9]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 9]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 9], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 10]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 10]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 10], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 11]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 11]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 11], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 12]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 12]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 12], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 13]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 13]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 13], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 14]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 14]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 14], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 15]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 15]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 15], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 16]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 16]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 16], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 17]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 17]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 17], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 18]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 18]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 18], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 19]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 19]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 19], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Load (0.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 20]]
+  [1m[36mProductOrder Load (0.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 20]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 20], ["record_type", "Product"], ["name", "images"]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "brands" WHERE "brands"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "brands" WHERE "brands"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "brands" WHERE "brands"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "brands" WHERE "brands"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand0"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand0"], ["created_at", "2021-06-10 09:25:20.357989"], ["updated_at", "2021-06-10 09:25:20.357989"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.362844"], ["updated_at", "2021-06-10 09:25:20.362844"], ["brand_id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.367161"], ["updated_at", "2021-06-10 09:25:20.367161"], ["brand_id", 5]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.370734"], ["updated_at", "2021-06-10 09:25:20.370734"], ["brand_id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.374407"], ["updated_at", "2021-06-10 09:25:20.374407"], ["brand_id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.378119"], ["updated_at", "2021-06-10 09:25:20.378119"], ["brand_id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand1"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand1"], ["created_at", "2021-06-10 09:25:20.384175"], ["updated_at", "2021-06-10 09:25:20.384175"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.387594"], ["updated_at", "2021-06-10 09:25:20.387594"], ["brand_id", 6]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.399156"], ["updated_at", "2021-06-10 09:25:20.399156"], ["brand_id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.403083"], ["updated_at", "2021-06-10 09:25:20.403083"], ["brand_id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.407079"], ["updated_at", "2021-06-10 09:25:20.407079"], ["brand_id", 6]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.410906"], ["updated_at", "2021-06-10 09:25:20.410906"], ["brand_id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand2"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand2"], ["created_at", "2021-06-10 09:25:20.416635"], ["updated_at", "2021-06-10 09:25:20.416635"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.419778"], ["updated_at", "2021-06-10 09:25:20.419778"], ["brand_id", 7]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.425305"], ["updated_at", "2021-06-10 09:25:20.425305"], ["brand_id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.429174"], ["updated_at", "2021-06-10 09:25:20.429174"], ["brand_id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.432729"], ["updated_at", "2021-06-10 09:25:20.432729"], ["brand_id", 7]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.436551"], ["updated_at", "2021-06-10 09:25:20.436551"], ["brand_id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand3"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand3"], ["created_at", "2021-06-10 09:25:20.442273"], ["updated_at", "2021-06-10 09:25:20.442273"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.444907"], ["updated_at", "2021-06-10 09:25:20.444907"], ["brand_id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.448688"], ["updated_at", "2021-06-10 09:25:20.448688"], ["brand_id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.452381"], ["updated_at", "2021-06-10 09:25:20.452381"], ["brand_id", 8]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.456293"], ["updated_at", "2021-06-10 09:25:20.456293"], ["brand_id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-10 09:25:20.460021"], ["updated_at", "2021-06-10 09:25:20.460021"], ["brand_id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products/new" for ::1 at 2021-06-10 19:25:38 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 408.3ms | Allocations: 348851)
+  Rendered products/new.html.erb within layouts/application (Duration: 410.8ms | Allocations: 349282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 4.6ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 466.3ms | Allocations: 365029)
+Completed 200 OK in 521ms (Views: 472.3ms | ActiveRecord: 10.6ms | Allocations: 379549)
+
+
+Started POST "/products" for ::1 at 2021-06-10 19:26:41 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF GRAND EDITION 3.0 VK CRICKET BAT", "description"=>"MRF is synonymous with leading test batsman like Tendulkar, Lara, Waugh, AB de Villiers and now Virat Kohli. Valued for their pre curved faces and lower sweet spots, these bats are guaranteed to be a game changer!", "price"=>"500", "brand_id"=>"6", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f85e4569e08 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-7874-bwyokl.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 5245)
+
+
+  
+KeyError (Missing configuration for the amazon Active Storage service. Configurations available for the test and local services.):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for ::1 at 2021-06-10 20:04:01 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF GRAND EDITION 3.0 VK CRICKET BAT", "description"=>"MRF is synonymous with leading test batsman like Tendulkar, Lara, Waugh, AB de Villiers and now Virat Kohli. Valued for their pre curved faces and lower sweet spots, these bats are guaranteed to be a game changer!", "price"=>"500", "brand_id"=>"6", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007ffeb60335b0 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-10777-13994ue.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 3099ms (ActiveRecord: 5.8ms | Allocations: 34860)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for ::1 at 2021-06-10 20:06:53 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF GRAND EDITION 3.0 VK CRICKET BAT", "description"=>"MRF is synonymous with leading test batsman like Tendulkar, Lara, Waugh, AB de Villiers and now Virat Kohli. Valued for their pre curved faces and lower sweet spots, these bats are guaranteed to be a game changer!", "price"=>"500", "brand_id"=>"6", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007ffeb42d97a8 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-10777-5jdw5c.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Creating scope :unattached. Overwriting existing method ActiveStorage::Blob.unattached.
+Completed 500 Internal Server Error in 1034ms (ActiveRecord: 0.0ms | Allocations: 9851)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started GET "/products/new" for ::1 at 2021-06-10 20:06:56 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 401.8ms | Allocations: 348785)
+  Rendered products/new.html.erb within layouts/application (Duration: 403.1ms | Allocations: 349103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 489.0ms | Allocations: 364850)
+Completed 200 OK in 508ms (Views: 490.7ms | ActiveRecord: 5.0ms | Allocations: 369815)
+
+
+Started POST "/products" for ::1 at 2021-06-10 20:07:10 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF GRAND EDITION 3.0 VK CRICKET BAT", "description"=>"MRF is synonymous with leading test batsman like Tendulkar, Lara, Waugh, AB de Villiers and now Virat Kohli. Valued for their pre curved faces and lower sweet spots, these bats are guaranteed to be a game changer!", "price"=>"500", "brand_id"=>"6", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007ffeb81d8fd0 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-10777-echruc.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Creating scope :unattached. Overwriting existing method ActiveStorage::Blob.unattached.
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5462)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started POST "/products" for ::1 at 2021-06-10 20:17:28 +1000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF GRAND EDITION 3.0 VK CRICKET BAT", "description"=>"MRF is synonymous with leading test batsman like Tendulkar, Lara, Waugh, AB de Villiers and now Virat Kohli. Valued for their pre curved faces and lower sweet spots, these bats are guaranteed to be a game changer!", "price"=>"500", "brand_id"=>"6", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fbafb8c40e8 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-11908-1ao2i9n.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 3092ms (ActiveRecord: 4.9ms | Allocations: 34541)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/products_controller.rb:18:in `create'
+Started GET "/products/new" for ::1 at 2021-06-10 20:31:53 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 461.6ms | Allocations: 348847)
+  Rendered products/new.html.erb within layouts/application (Duration: 463.9ms | Allocations: 349278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 430)
+  Rendered layout layouts/application.html.erb (Duration: 565.2ms | Allocations: 365025)
+Completed 200 OK in 614ms (Views: 569.6ms | ActiveRecord: 8.7ms | Allocations: 379545)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-06-10 20:31:57 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 685)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 9895)
+Completed 200 OK in 50ms (Views: 26.2ms | ActiveRecord: 6.1ms | Allocations: 17632)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-06-10 20:31:59 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 308)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 9218)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 11056)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-06-10 20:32:01 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 150)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 8971)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 9561)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-06-10 20:32:09 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akashwaghray@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (24.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "akashwaghray@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 34ms (ActiveRecord: 25.4ms | Allocations: 2348)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"akashwaghray@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 150)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1000)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 8050)
+Completed 200 OK in 227ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 8683)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-06-10 20:32:21 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 9057)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 9599)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-06-10 20:32:23 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8297)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 8851)
+
+
+Started POST "/users" for ::1 at 2021-06-10 20:32:38 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"aj", "email"=>"aj@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :name[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aj@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aj@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (7.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "aj@gmail.com"], ["created_at", "2021-06-10 10:32:38.960647"], ["updated_at", "2021-06-10 10:32:38.960647"], ["encrypted_password", "$2a$12$v8v7SG4Bnflb6PGfk51ZduQYD2sz/NvROiu/rlky8M6K1ejvuDbhG"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 246ms (ActiveRecord: 10.0ms | Allocations: 10292)
+
+
+Started GET "/" for ::1 at 2021-06-10 20:32:38 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.8ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 9819)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 2.8ms | Allocations: 10379)
+
+
+Started GET "/products/40" for ::1 at 2021-06-10 20:32:46 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (42.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 40]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 76.6ms | Allocations: 8291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1018)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 15995)
+Completed 200 OK in 100ms (Views: 39.2ms | ActiveRecord: 52.5ms | Allocations: 18091)
+
+
+Started GET "/products/21" for ::1 at 2021-06-10 20:32:54 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/views/products/show.html.erb:30
+  Rendered products/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 11109)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 5.1ms | Allocations: 12212)
+
+
+Started DELETE "/products/21" for ::1 at 2021-06-10 20:32:57 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"21"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mRating Load (1.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProductOrder Load (42.1ms)[0m  [1m[34mSELECT "product_orders".* FROM "product_orders" WHERE "product_orders"."product_id" = $1[0m  [["product_id", 21]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 21], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mProduct Destroy (1.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:28:in `destroy'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 75ms (ActiveRecord: 51.9ms | Allocations: 7441)
+
+
+Started GET "/products" for ::1 at 2021-06-10 20:32:57 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 9543)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 1.5ms | Allocations: 9944)
+
+
+Started GET "/products/new" for ::1 at 2021-06-10 20:32:58 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 6.7ms | Allocations: 1855)
+  Rendered products/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 10589)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 2.2ms | Allocations: 11774)
+
+
+Started POST "/products" for ::1 at 2021-06-10 20:33:15 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Ball", "description"=>"hello", "price"=>"199", "brand_id"=>"5", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007f83e76c9798 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-13164-1lfckdk.jpeg>, @original_filename="bat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"bat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 1035ms (ActiveRecord: 0.0ms | Allocations: 24751)
+
+
+  
+Aws::Sigv4::Errors::MissingCredentialsError (missing credentials, provide credentials with one of the following options:
+  - :access_key_id and :secret_access_key
+  - :credentials
+  - :credentials_provider):
+  
+app/controllers/products_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8217603567930063405)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePurchases (20210610104229)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8217603567930063405)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8217603567930063405)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePurchases (20210610104532)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.4ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" bigserial primary key, "product_id" bigint NOT NULL, "user_id" bigint NOT NULL, "receipt_url" character varying, "payment_intent_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_0d630f0bc7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_2888c5cba9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_product_id" ON "purchases" ("product_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_user_id" ON "purchases" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210610104532"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8217603567930063405)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products/new" for ::1 at 2021-06-10 20:49:52 +1000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 398.8ms | Allocations: 348785)
+  Rendered products/new.html.erb within layouts/application (Duration: 401.4ms | Allocations: 349216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 28.7ms | Allocations: 7221)
+  Rendered layout layouts/application.html.erb (Duration: 482.3ms | Allocations: 371752)
+Completed 200 OK in 535ms (Views: 473.4ms | ActiveRecord: 22.3ms | Allocations: 386030)
+
+
+Started GET "/" for ::1 at 2021-06-10 20:49:55 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 1019)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 10525)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 5.6ms | Allocations: 11090)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:49:58 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (2.5ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 36.6ms | Allocations: 8415)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 1018)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 16125)
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 13.2ms | Allocations: 18134)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:52:50 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 6584)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 14850)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 3.6ms | Allocations: 16751)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:53:16 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2970)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.7ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 11335)
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 4.0ms | Allocations: 13230)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:53:39 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2975)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.7ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 11342)
+Completed 200 OK in 25ms (Views: 17.1ms | ActiveRecord: 3.6ms | Allocations: 13257)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:56:06 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 11336)
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 3.2ms | Allocations: 13231)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 20:59:10 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3569)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3634)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms | Allocations: 5508)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> <%= @product.name%></h1>
+
+
+
+
+
+<%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+
+ <ul>
+ <li> <h5> Description: <%= @product.description %> </h5> </li>
+ <li><h5> price: $<%= @product.price%></h4> </li>
+ 
+ </ul>
+ 
+ 
+ <ul>
+
+ <div>
+  <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+    <div class="edit-box"> 
+    </div>
+ </div>
+  
+  
+  <%= button_to 'DESTROY', @product, method: :delete,
+        data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+          <%= button_tag "Purchase for #{number_to_currency(@product.price class="btn btn-outline-success")}" %>
+
+
+        </ul>
+
+
+<% @product.ratings.each do |rating|%>
+<h5><%= rating.user.name%></h5>
+<p>Review: <%= rating.review%> </p>
+<p>Rating: <%= rating.rating%>  </p>
+
+
+<%end%>
+
+
+
+):
+1:    <h1> <%= @product.name%></h1>
+2:    
+3:    
+4:    
+5:    
+6:    
+7:    <%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+8:    
+9:     <ul>
+10:     <li> <h5> Description: <%= @product.description %> </h5> </li>
+11:     <li><h5> price: $<%= @product.price%></h4> </li>
+12:     
+13:     </ul>
+14:     
+15:     
+16:     <ul>
+17:    
+18:     <div>
+19:      <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+20:        <div class="edit-box"> 
+21:        </div>
+22:     </div>
+23:      
+24:      
+25:      <%= button_to 'DESTROY', @product, method: :delete,
+26:            data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+27:              <%= button_tag "Purchase for #{number_to_currency(@product.price class="btn btn-outline-success")}" %>
+28:    
+29:    
+30:            </ul>
+31:    
+32:    
+33:    <% @product.ratings.each do |rating|%>
+34:    <h5><%= rating.user.name%></h5>
+35:    <p>Review: <%= rating.review%> </p>
+36:    <p>Rating: <%= rating.rating%>  </p>
+37:    
+38:    
+39:    <%end%>
+  
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected ')', expecting '}'
+app/views/products/show.html.erb:44: unterminated string meets end of file
+app/views/products/show.html.erb:44: syntax error, unexpected end-of-input, expecting '}'
+Started GET "/products/22" for ::1 at 2021-06-10 21:00:29 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1322)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1387)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms | Allocations: 3410)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> <%= @product.name%></h1>
+
+
+
+
+
+<%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+
+ <ul>
+ <li> <h5> Description: <%= @product.description %> </h5> </li>
+ <li><h5> price: $<%= @product.price%></h4> </li>
+ 
+ </ul>
+ 
+ 
+ <ul>
+
+ <div>
+  <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+    <div class="edit-box"> 
+    </div>
+ </div>
+  
+  
+  <%= button_to 'DESTROY', @product, method: :delete,
+        data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+          <%= button_tag "Purchase for #{number_to_currency(@product.price )}",class="btn btn-outline-sucess" %>
+
+
+        </ul>
+
+
+<% @product.ratings.each do |rating|%>
+<h5><%= rating.user.name%></h5>
+<p>Review: <%= rating.review%> </p>
+<p>Rating: <%= rating.rating%>  </p>
+
+
+<%end%>
+
+
+
+):
+1:    <h1> <%= @product.name%></h1>
+2:    
+3:    
+4:    
+5:    
+6:    
+7:    <%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+8:    
+9:     <ul>
+10:     <li> <h5> Description: <%= @product.description %> </h5> </li>
+11:     <li><h5> price: $<%= @product.price%></h4> </li>
+12:     
+13:     </ul>
+14:     
+15:     
+16:     <ul>
+17:    
+18:     <div>
+19:      <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+20:        <div class="edit-box"> 
+21:        </div>
+22:     </div>
+23:      
+24:      
+25:      <%= button_to 'DESTROY', @product, method: :delete,
+26:            data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+27:              <%= button_tag "Purchase for #{number_to_currency(@product.price )}",class="btn btn-outline-sucess" %>
+28:    
+29:    
+30:            </ul>
+31:    
+32:    
+33:    <% @product.ratings.each do |rating|%>
+34:    <h5><%= rating.user.name%></h5>
+35:    <p>Review: <%= rating.review%> </p>
+36:    <p>Rating: <%= rating.rating%>  </p>
+37:    
+38:    
+39:    <%end%>
+  
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+Started GET "/products/22" for ::1 at 2021-06-10 21:00:34 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1378)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms | Allocations: 2469)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> <%= @product.name%></h1>
+
+
+
+
+
+<%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+
+ <ul>
+ <li> <h5> Description: <%= @product.description %> </h5> </li>
+ <li><h5> price: $<%= @product.price%></h4> </li>
+ 
+ </ul>
+ 
+ 
+ <ul>
+
+ <div>
+  <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+    <div class="edit-box"> 
+    </div>
+ </div>
+  
+  
+  <%= button_to 'DESTROY', @product, method: :delete,
+        data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+          <%= button_tag "Purchase for #{number_to_currency(@product.price )}",class="btn btn-outline-sucess" %>
+
+
+        </ul>
+
+
+<% @product.ratings.each do |rating|%>
+<h5><%= rating.user.name%></h5>
+<p>Review: <%= rating.review%> </p>
+<p>Rating: <%= rating.rating%>  </p>
+
+
+<%end%>
+
+
+
+):
+1:    <h1> <%= @product.name%></h1>
+2:    
+3:    
+4:    
+5:    
+6:    
+7:    <%= @product.images.attached? ? (image_tag @product.images.first,  alt:'Image of Bat') : (image_tag 'BAT.jpg', alt:'Default image of Bat') %>
+8:    
+9:     <ul>
+10:     <li> <h5> Description: <%= @product.description %> </h5> </li>
+11:     <li><h5> price: $<%= @product.price%></h4> </li>
+12:     
+13:     </ul>
+14:     
+15:     
+16:     <ul>
+17:    
+18:     <div>
+19:      <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
+20:        <div class="edit-box"> 
+21:        </div>
+22:     </div>
+23:      
+24:      
+25:      <%= button_to 'DESTROY', @product, method: :delete,
+26:            data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+27:              <%= button_tag "Purchase for #{number_to_currency(@product.price )}",class="btn btn-outline-sucess" %>
+28:    
+29:    
+30:            </ul>
+31:    
+32:    
+33:    <% @product.ratings.each do |rating|%>
+34:    <h5><%= rating.user.name%></h5>
+35:    <p>Review: <%= rating.review%> </p>
+36:    <p>Rating: <%= rating.rating%>  </p>
+37:    
+38:    
+39:    <%end%>
+  
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+app/views/products/show.html.erb:27: syntax error, unexpected '='
+Started GET "/products/22" for ::1 at 2021-06-10 21:00:51 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3271)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.9ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 11897)
+Completed 200 OK in 44ms (Views: 35.0ms | ActiveRecord: 5.4ms | Allocations: 13807)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 21:01:05 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2977)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 5.8ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 11342)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 4.2ms | Allocations: 13237)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 21:15:00 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 511.1ms | Allocations: 363153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 19.4ms | Allocations: 6604)
+  Rendered layout layouts/application.html.erb (Duration: 548.5ms | Allocations: 377369)
+Completed 200 OK in 598ms (Views: 538.3ms | ActiveRecord: 25.5ms | Allocations: 389540)
+
+
+Started GET "/" for ::1 at 2021-06-10 21:15:04 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.9ms | Allocations: 1019)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 10492)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 2.5ms | Allocations: 11035)
+
+
+Started GET "/products/new" for ::1 at 2021-06-10 21:15:07 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (4.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 11.7ms | Allocations: 3122)
+  Rendered products/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3439)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.5ms | Allocations: 1018)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 11331)
+Completed 200 OK in 53ms (Views: 26.6ms | ActiveRecord: 8.9ms | Allocations: 16035)
+
+
+Started POST "/products" for ::1 at 2021-06-10 21:15:32 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"MRF Genius Grand Edition 2.0 Senior", "description"=>"hello", "price"=>"100", "brand_id"=>"5", "images"=>#<ActionDispatch::Http::UploadedFile:0x00007fe738265760 @tempfile=#<Tempfile:/var/folders/1c/y253mjzs0kq1bdbgctdr4qnh0000gn/T/RackMultipart20210610-16517-xy1zzu.jpeg>, @original_filename="5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[images]\"; filename=\"5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Create (43.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "MRF Genius Grand Edition 2.0 Senior"], ["description", "hello"], ["price", "100.0"], ["created_at", "2021-06-10 11:15:32.916632"], ["updated_at", "2021-06-10 11:15:32.916632"], ["brand_id", 5]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Blob Create (44.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "6m52ntmmki60timemjy4qlih0lmq"], ["filename", "5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "amazon"], ["byte_size", 22054], ["checksum", "LP4BKJUAzPrdSsupwth5zw=="], ["created_at", "2021-06-10 11:15:32.979415"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Create (2.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "images"], ["record_type", "Product"], ["record_id", 41], ["blob_id", 1], ["created_at", "2021-06-10 11:15:33.025724"]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mProduct Update (1.4ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = $1 WHERE "products"."id" = $2[0m  [["updated_at", "2021-06-10 11:15:33.029694"], ["id", 41]]
+  ↳ app/controllers/products_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:20:in `create'
+[36m  S3 Storage (119.3ms) [0m[32mUploaded file to key: 6m52ntmmki60timemjy4qlih0lmq (checksum: LP4BKJUAzPrdSsupwth5zw==)[0m
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 147.5ms | Allocations: 43552)
+
+
+  
+Aws::S3::Errors::AccessDenied (Access Denied):
+  
+app/controllers/products_controller.rb:20:in `create'
+Started GET "/products/new" for ::1 at 2021-06-10 21:16:23 +1000
+Processing by ProductsController#new as HTML
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:11:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/views/products/_form.html.erb:29
+  Rendered products/_form.html.erb (Duration: 5.8ms | Allocations: 1985)
+  Rendered products/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1084)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 10322)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 1.5ms | Allocations: 11688)
+
+
+Started GET "/" for ::1 at 2021-06-10 21:16:24 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 10450)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 2.0ms | Allocations: 10866)
+
+
+Started GET "/products/41" for ::1 at 2021-06-10 21:16:27 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 41]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 15.9ms | Allocations: 5066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 13064)
+Completed 200 OK in 40ms (Views: 28.2ms | ActiveRecord: 7.8ms | Allocations: 14190)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e/5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg" for ::1 at 2021-06-10 21:16:27 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e", "filename"=>"5729f4811a0be05530b159572957553f0b689cf5_483x"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: 6m52ntmmki60timemjy4qlih0lmq (https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T111627Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d37fe5a99e1f79c9a74558822b6278b7dd28b0f8dd805b14d1fc47d1150d67d7)[0m
+Redirected to https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T111627Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=d37fe5a99e1f79c9a74558822b6278b7dd28b0f8dd805b14d1fc47d1150d67d7
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms | Allocations: 2520)
+
+
+Started GET "/products/41" for ::1 at 2021-06-10 21:27:07 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:59:in `set_product'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:40:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 41]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 483.7ms | Allocations: 386935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 13.7ms | Allocations: 6575)
+  Rendered layout layouts/application.html.erb (Duration: 605.7ms | Allocations: 422506)
+Completed 200 OK in 649ms (Views: 590.4ms | ActiveRecord: 27.2ms | Allocations: 435061)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e/5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg" for ::1 at 2021-06-10 21:27:08 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e", "filename"=>"5729f4811a0be05530b159572957553f0b689cf5_483x"}
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (3.0ms) [0m[34mGenerated URL for file at key: 6m52ntmmki60timemjy4qlih0lmq (https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T112708Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fe7e2ca53048dd93144b32b791813c5be5ddd6cd59be31b685703f3b0133f63c)[0m
+Redirected to https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T112708Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fe7e2ca53048dd93144b32b791813c5be5ddd6cd59be31b685703f3b0133f63c
+Completed 302 Found in 38ms (ActiveRecord: 1.2ms | Allocations: 2520)
+
+
+Started GET "/products/41" for ::1 at 2021-06-10 21:38:09 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:79:in `set_product'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:43:in `show'
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 14.2ms | Allocations: 19237)
+
+
+  
+NoMethodError (undefined method `eamil' for #<User:0x00007ff817082a20>
+Did you mean?  email):
+  
+app/controllers/products_controller.rb:44:in `show'
+Started GET "/products/41" for ::1 at 2021-06-10 21:38:37 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:79:in `set_product'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:43:in `show'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 13.7ms | Allocations: 14791)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+app/controllers/products_controller.rb:41:in `show'
+Started GET "/" for ::1 at 2021-06-10 21:44:33 +1000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 5901)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 39.8ms | Allocations: 7180)
+  Rendered layout layouts/application.html.erb (Duration: 120.1ms | Allocations: 28771)
+Completed 200 OK in 149ms (Views: 106.4ms | ActiveRecord: 19.3ms | Allocations: 35923)
+
+
+Started GET "/products/22" for ::1 at 2021-06-10 21:44:37 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:43:in `show'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.7ms | Allocations: 3115)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+app/controllers/products_controller.rb:41:in `show'
+Started GET "/" for ::1 at 2021-06-10 21:44:52 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 1084)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 9904)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.9ms | Allocations: 10410)
+
+
+Started GET "/products/41" for ::1 at 2021-06-10 21:44:54 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:43:in `show'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.4ms | Allocations: 3018)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+app/controllers/products_controller.rb:41:in `show'
+Started GET "/products/41" for ::1 at 2021-06-10 21:49:41 +1000
+  
+SyntaxError (/Users/ajay/Desktop/My_project/MarketPlace-App/app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+    stripe_session = Stripe: :Checkout: :Session.create(
+                           ^
+):
+  
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+Started GET "/products/41" for ::1 at 2021-06-10 21:49:58 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:43:in `show'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 8.8ms | Allocations: 14401)
+
+
+  
+Stripe::AuthenticationError (No API key provided. Set your API key using "Stripe.api_key = <API-KEY>". You can generate API keys from the Stripe web interface. See https://stripe.com/api for details, or email support@stripe.com if you have any questions.):
+  
+app/controllers/products_controller.rb:41:in `show'
+Started GET "/products/41" for ::1 at 2021-06-10 21:50:10 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.2ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 41]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 500.6ms | Allocations: 386383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 12.7ms | Allocations: 6085)
+  Rendered layout layouts/application.html.erb (Duration: 527.6ms | Allocations: 399411)
+Completed 200 OK in 549ms (Views: 508.4ms | ActiveRecord: 24.6ms | Allocations: 407944)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e/5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg" for ::1 at 2021-06-10 21:50:11 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e", "filename"=>"5729f4811a0be05530b159572957553f0b689cf5_483x"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: 6m52ntmmki60timemjy4qlih0lmq (https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T115011Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=eb661dd8f5a6a6b34f20ec8b8ac58006ab60aa0ac7ff4e12a04eef26a0ac0c37)[0m
+Redirected to https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210610%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210610T115011Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=eb661dd8f5a6a6b34f20ec8b8ac58006ab60aa0ac7ff4e12a04eef26a0ac0c37
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms | Allocations: 2521)
+
+

@@ -13,18 +13,21 @@
  </ul>
  
  
- 
+ <ul>
 
  <div>
   <%= link_to "edit", edit_product_path(@product),class:"btn btn-success" %> 
     <div class="edit-box"> 
     </div>
  </div>
-  </p> 
+  
   
   <%= button_to 'DESTROY', @product, method: :delete,
         data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
+          <%= button_tag "Purchase for #{number_to_currency(@product.price )}",data: {stripe:'payment', session_id: @session_id, public_key: Rails.application.credentials.dig(:stripe, :public_key)},class:"btn btn-outline-success" %>
 
+
+        </ul>
 
 
 <% @product.ratings.each do |rating|%>
