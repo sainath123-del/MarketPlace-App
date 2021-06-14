@@ -45669,3 +45669,523 @@ Redirected to https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60ti
 Completed 302 Found in 11ms (ActiveRecord: 1.1ms | Allocations: 2521)
 
 
+Started GET "/products/41" for ::1 at 2021-06-14 11:14:37 +1000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mProduct Load (8.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (47.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 41]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 617.6ms | Allocations: 386953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 21.4ms | Allocations: 6575)
+  Rendered layout layouts/application.html.erb (Duration: 744.4ms | Allocations: 409113)
+Completed 200 OK in 871ms (Views: 678.3ms | ActiveRecord: 152.4ms | Allocations: 421303)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e/5729f4811a0be05530b159572957553f0b689cf5_483x.jpeg" for ::1 at 2021-06-14 11:14:39 +1000
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8628246bb1602d4a4c9e074fbcbef36a7f55048e", "filename"=>"5729f4811a0be05530b159572957553f0b689cf5_483x"}
+  [1m[36mActiveStorage::Blob Load (4.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: 6m52ntmmki60timemjy4qlih0lmq (https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210614%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210614T011439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c7b978eacfcc60e1e070451d7ea7e040fcfbbd7d707167783f5b0c0db0051971)[0m
+Redirected to https://cricket-app.s3.ap-southeast-2.amazonaws.com/6m52ntmmki60timemjy4qlih0lmq?response-content-disposition=inline%3B%20filename%3D%225729f4811a0be05530b159572957553f0b689cf5_483x.jpeg%22%3B%20filename%2A%3DUTF-8%27%275729f4811a0be05530b159572957553f0b689cf5_483x.jpeg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAXKZDLTUL2FVW6NMU%2F20210614%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20210614T011439Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c7b978eacfcc60e1e070451d7ea7e040fcfbbd7d707167783f5b0c0db0051971
+Completed 302 Found in 13ms (ActiveRecord: 4.7ms | Allocations: 3074)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:14:45 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.1ms | Allocations: 1019)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 10545)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 2.0ms | Allocations: 11088)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-06-14 11:14:49 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.7ms | Allocations: 2665)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:14:49 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 3.0ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 8771)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 1.1ms | Allocations: 9175)
+
+
+Started GET "/products/22" for ::1 at 2021-06-14 11:14:54 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.3ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 3451)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 10409)
+Completed 200 OK in 28ms (Views: 19.8ms | ActiveRecord: 5.0ms | Allocations: 11526)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:15:01 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 8743)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 2.1ms | Allocations: 9143)
+
+
+Started GET "/products/25" for ::1 at 2021-06-14 11:15:08 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.4ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.6ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 10347)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 5.0ms | Allocations: 11476)
+
+
+Started DELETE "/products/25" for ::1 at 2021-06-14 11:15:11 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"25"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1142)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products/25" for ::1 at 2021-06-14 11:15:26 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 25]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 10060)
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 2.9ms | Allocations: 11306)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:15:28 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 9495)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.8ms | Allocations: 9896)
+
+
+Started GET "/products/40" for ::1 at 2021-06-14 11:15:30 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 40]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2683)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9641)
+Completed 200 OK in 28ms (Views: 15.3ms | ActiveRecord: 6.6ms | Allocations: 11510)
+
+
+Started DELETE "/products/40" for ::1 at 2021-06-14 11:15:33 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"40"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1166)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/40" for ::1 at 2021-06-14 11:17:50 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"40"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1670)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/40" for ::1 at 2021-06-14 11:19:18 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"40"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1665)
+
+
+  
+NoMethodError (undefined method `Destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products" for ::1 at 2021-06-14 11:22:11 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 5343)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 12471)
+Completed 200 OK in 55ms (Views: 39.8ms | ActiveRecord: 5.7ms | Allocations: 16724)
+
+
+Started GET "/products" for ::1 at 2021-06-14 11:22:11 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 8743)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.9ms | Allocations: 9140)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-06-14 11:22:14 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 606)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 9995)
+Completed 200 OK in 64ms (Views: 39.7ms | ActiveRecord: 8.2ms | Allocations: 17358)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-06-14 11:22:20 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 219)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 140)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 9826)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 11046)
+
+
+Started POST "/users" for ::1 at 2021-06-14 11:22:42 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"vijay", "email"=>"vj@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :name[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vj@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vj@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vj@gmail.com"], ["created_at", "2021-06-14 01:22:42.306421"], ["updated_at", "2021-06-14 01:22:42.306421"], ["encrypted_password", "$2a$12$8CzE90tfu/LEr6W1eFn3BeaaLcEUgxfYOFi11.T02ZMyTd7IHhpY6"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 12.4ms | Allocations: 10121)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:22:42 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (41.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 43.8ms | Allocations: 1082)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 9670)
+Completed 200 OK in 60ms (Views: 16.9ms | ActiveRecord: 42.4ms | Allocations: 10081)
+
+
+Started GET "/" for ::1 at 2021-06-14 11:22:50 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9588)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 2.2ms | Allocations: 9993)
+
+
+Started GET "/products/27" for ::1 at 2021-06-14 11:22:53 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 27]]
+  ↳ app/views/products/show.html.erb:33
+  Rendered products/show.html.erb within layouts/application (Duration: 22.2ms | Allocations: 6561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.4ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 14267)
+Completed 200 OK in 45ms (Views: 29.2ms | ActiveRecord: 10.9ms | Allocations: 16127)
+
+
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:22:56 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1150)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:23:52 +1000
+  
+SyntaxError (/Users/ajay/Desktop/My_project/MarketPlace-App/app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+    stripe_session = Stripe: :Checkout::Session.create(
+                           ^
+):
+  
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:24:40 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1668)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:25:53 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1149)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:26:08 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1149)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started DELETE "/products/27" for ::1 at 2021-06-14 11:30:50 +1000
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 2666)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products" for ::1 at 2021-06-14 11:34:36 +1000
+  
+SyntaxError (/Users/ajay/Desktop/My_project/MarketPlace-App/app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+    stripe_session = Stripe: :Checkout: :Session.create(
+                           ^
+):
+  
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+app/controllers/products_controller.rb:41: syntax error, unexpected ':', expecting `end'
+Started GET "/products" for ::1 at 2021-06-14 11:35:10 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 6284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 27.6ms | Allocations: 7203)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 29152)
+Completed 200 OK in 105ms (Views: 73.8ms | ActiveRecord: 16.9ms | Allocations: 34793)
+
+
+Started GET "/products/22" for ::1 at 2021-06-14 11:35:11 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.9ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 22]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 37.1ms | Allocations: 9087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 3.9ms | Allocations: 1018)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 16797)
+Completed 200 OK in 62ms (Views: 42.4ms | ActiveRecord: 14.8ms | Allocations: 18148)
+
+
+Started DELETE "/products/22" for ::1 at 2021-06-14 11:35:16 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"22"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1174)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/22" for ::1 at 2021-06-14 11:39:59 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"22"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1669)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products" for ::1 at 2021-06-14 11:40:02 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 15.8ms | Allocations: 6028)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 18354)
+Completed 200 OK in 61ms (Views: 37.8ms | ActiveRecord: 14.5ms | Allocations: 22030)
+
+
+Started GET "/products" for ::1 at 2021-06-14 11:40:03 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.4ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 9597)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 2.1ms | Allocations: 10004)
+
+
+Started GET "/products/32" for ::1 at 2021-06-14 11:40:04 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.7ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 32]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 7110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.6ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 14813)
+Completed 200 OK in 44ms (Views: 30.1ms | ActiveRecord: 10.3ms | Allocations: 16012)
+
+
+Started DELETE "/products/32" for ::1 at 2021-06-14 11:40:08 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"32"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1149)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started DELETE "/products/32" for ::1 at 2021-06-14 11:41:44 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"32"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1669)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'

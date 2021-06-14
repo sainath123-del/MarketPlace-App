@@ -26,8 +26,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy
-    redirect_to products_path 
+ @product.destroy
+  redirect_to products_path
   end
 
   def edit
@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-  #   stripe_session = Stripe::Checkout::Session.create(
+  #   stripe_session = Stripe: :Checkout: :Session.create(
   #  payment_method_typs: ['card'],
   #  client_reference_is: current_user.id,
   #  customer_email: current_user.email,

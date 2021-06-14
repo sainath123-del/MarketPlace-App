@@ -24,8 +24,7 @@
   
   <%= button_to 'DESTROY', @product, method: :delete,
         data: { confirm: "Are you sure?" }, class:"btn btn-danger m-1" %> 
-          <%= button_tag "Purchase for #{number_to_currency(@product.price )}",data: {stripe:'payment', session_id: @session_id, public_key: Rails.application.credentials.dig(:stripe, :public_key)},class:"btn btn-outline-success" %>
-
+         
 
         </ul>
 
