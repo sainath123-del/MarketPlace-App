@@ -46460,3 +46460,462 @@ ActionView::Template::Error (undefined method `name' for nil:NilClass):
     7: <%= render 'form', product: @product, brands: @brands, title: 'This is the Edit page' %>
   
 app/views/products/edit.html.erb:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (44.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (54.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cricket_sport_development"[0m
+  [1m[35m (44.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "cricket_sport_test"[0m
+  [1m[35m (363.7ms)[0m  [1m[35mCREATE DATABASE "cricket_sport_development" ENCODING = 'unicode'[0m
+  [1m[35m (122.1ms)[0m  [1m[35mCREATE DATABASE "cricket_sport_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "brands" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_orders" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "product_orders" ("id" bigserial primary key, "order_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_order_id" ON "product_orders" ("order_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_product_id" ON "product_orders" ("product_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" decimal(8,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "brand_id" bigint NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "purchases" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" bigserial primary key, "product_id" bigint NOT NULL, "user_id" bigint NOT NULL, "receipt_url" character varying, "payment_intent_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_product_id" ON "purchases" ("product_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_user_id" ON "purchases" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ratings" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" bigserial primary key, "rating" integer, "review" text, "user_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_product_id" ON "ratings" ("product_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_user_id" ON "ratings" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "status" integer, "password_digest" character varying, "encrypted_password" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (5.9ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_72071d5a6c"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_14f14aa898"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "purchases" ADD CONSTRAINT "fk_rails_0d630f0bc7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "purchases" ADD CONSTRAINT "fk_rails_2888c5cba9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_f846e598a7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_a7dfeb9f5f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210610104532)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210529021851),
+(20210529022655),
+(20210529040554),
+(20210529041429),
+(20210529041704),
+(20210529072205),
+(20210529074006),
+(20210529074133),
+(20210530055459),
+(20210603000004),
+(20210610065649),
+(20210610070418),
+(20210610085259);
+
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-14 02:19:31.041786"], ["updated_at", "2021-06-14 02:19:31.041786"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b5ce839a36e43c37b1143cd5499ad49215613255"], ["created_at", "2021-06-14 02:19:31.051743"], ["updated_at", "2021-06-14 02:19:31.051743"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments" CASCADE[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "brands" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "product_orders" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "product_orders" ("id" bigserial primary key, "order_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_order_id" ON "product_orders" ("order_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_product_orders_on_product_id" ON "product_orders" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" decimal(8,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "brand_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "purchases" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" bigserial primary key, "product_id" bigint NOT NULL, "user_id" bigint NOT NULL, "receipt_url" character varying, "payment_intent_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_product_id" ON "purchases" ("product_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_purchases_on_user_id" ON "purchases" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ratings" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ratings" ("id" bigserial primary key, "rating" integer, "review" text, "user_id" bigint NOT NULL, "product_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_product_id" ON "ratings" ("product_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_ratings_on_user_id" ON "ratings" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "status" integer, "password_digest" character varying, "encrypted_password" character varying, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "active_storage_attachments" ADD CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "active_storage_variant_records" ADD CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_72071d5a6c"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "product_orders" ADD CONSTRAINT "fk_rails_14f14aa898"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "purchases" ADD CONSTRAINT "fk_rails_0d630f0bc7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "purchases" ADD CONSTRAINT "fk_rails_2888c5cba9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_f846e598a7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "ratings" ADD CONSTRAINT "fk_rails_a7dfeb9f5f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210610104532)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210529021851),
+(20210529022655),
+(20210529040554),
+(20210529041429),
+(20210529041704),
+(20210529072205),
+(20210529074006),
+(20210529074133),
+(20210530055459),
+(20210603000004),
+(20210610065649),
+(20210610070418),
+(20210610085259);
+
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-14 02:19:31.247463"], ["updated_at", "2021-06-14 02:19:31.247463"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-06-14 02:19:31.252483"], ["key", "environment"]]
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b5ce839a36e43c37b1143cd5499ad49215613255"], ["created_at", "2021-06-14 02:19:31.300566"], ["updated_at", "2021-06-14 02:19:31.300566"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand0"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.5ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand0"], ["created_at", "2021-06-14 02:19:31.376669"], ["updated_at", "2021-06-14 02:19:31.376669"]]
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.443805"], ["updated_at", "2021-06-14 02:19:31.443805"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.470842"], ["updated_at", "2021-06-14 02:19:31.470842"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.475704"], ["updated_at", "2021-06-14 02:19:31.475704"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.480072"], ["updated_at", "2021-06-14 02:19:31.480072"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.483835"], ["updated_at", "2021-06-14 02:19:31.483835"], ["brand_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand1"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand1"], ["created_at", "2021-06-14 02:19:31.489268"], ["updated_at", "2021-06-14 02:19:31.489268"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.492070"], ["updated_at", "2021-06-14 02:19:31.492070"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.496187"], ["updated_at", "2021-06-14 02:19:31.496187"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.500184"], ["updated_at", "2021-06-14 02:19:31.500184"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.504366"], ["updated_at", "2021-06-14 02:19:31.504366"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.508315"], ["updated_at", "2021-06-14 02:19:31.508315"], ["brand_id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand2"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand2"], ["created_at", "2021-06-14 02:19:31.514212"], ["updated_at", "2021-06-14 02:19:31.514212"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.517165"], ["updated_at", "2021-06-14 02:19:31.517165"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.521024"], ["updated_at", "2021-06-14 02:19:31.521024"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.525545"], ["updated_at", "2021-06-14 02:19:31.525545"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.529369"], ["updated_at", "2021-06-14 02:19:31.529369"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.533266"], ["updated_at", "2021-06-14 02:19:31.533266"], ["brand_id", 3]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBrand Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "brands" WHERE "brands"."name" = $1 LIMIT $2[0m  [["name", "Brand3"], ["LIMIT", 1]]
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Brand3"], ["created_at", "2021-06-14 02:19:31.540082"], ["updated_at", "2021-06-14 02:19:31.540082"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.543174"], ["updated_at", "2021-06-14 02:19:31.543174"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.547179"], ["updated_at", "2021-06-14 02:19:31.547179"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.551396"], ["updated_at", "2021-06-14 02:19:31.551396"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.556455"], ["updated_at", "2021-06-14 02:19:31.556455"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "created_at", "updated_at", "brand_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bat"], ["description", "This is awesome bat"], ["price", "100.0"], ["created_at", "2021-06-14 02:19:31.560411"], ["updated_at", "2021-06-14 02:19:31.560411"], ["brand_id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products/41/edit" for ::1 at 2021-06-14 12:41:50 +1000
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mBrand Load (49.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:34:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2439)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2508)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 62.3ms | Allocations: 11075)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <div class="d-flex flex-column justify-content-center align-items-center new-product-layout ">
+    3: 
+    4: <h1> Edit<span class='text-color'> <%= @product.name%> </span> </h1>
+    5: 
+    6: 
+    7: <%= render 'form', product: @product, brands: @brands, title: 'This is the Edit page' %>
+  
+app/views/products/edit.html.erb:4
+Started GET "/products" for ::1 at 2021-06-14 12:41:56 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (216.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 236.1ms | Allocations: 5587)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (29.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 120.4ms | Allocations: 3434)
+  Rendered layout layouts/application.html.erb (Duration: 547.5ms | Allocations: 24638)
+Completed 200 OK in 568ms (Views: 246.0ms | ActiveRecord: 302.2ms | Allocations: 29599)
+
+
+Started GET "/products" for ::1 at 2021-06-14 12:41:56 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 6.3ms | Allocations: 1050)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 9618)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 5.5ms | Allocations: 10031)
+
+
+Started GET "/" for ::1 at 2021-06-14 12:41:59 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 8730)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.2ms | Allocations: 9141)
+
+
+Started GET "/products/1" for ::1 at 2021-06-14 12:42:03 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (23.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (37.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (28.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 174.5ms | Allocations: 10633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 183.9ms | Allocations: 17651)
+Completed 200 OK in 214ms (Views: 57.6ms | ActiveRecord: 149.8ms | Allocations: 19715)
+
+
+Started GET "/products/1/edit" for ::1 at 2021-06-14 12:42:05 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/products_controller.rb:34:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1489)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1554)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms | Allocations: 2711)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <div class="d-flex flex-column justify-content-center align-items-center new-product-layout ">
+    3: 
+    4: <h1> Edit<span class='text-color'> <%= @product.name%> </span> </h1>
+    5: 
+    6: 
+    7: <%= render 'form', product: @product, brands: @brands, title: 'This is the Edit page' %>
+  
+app/views/products/edit.html.erb:4
+Started GET "/products/1" for ::1 at 2021-06-14 12:42:08 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.5ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 9739)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 5.1ms | Allocations: 10880)
+
+
+Started DELETE "/products/1" for ::1 at 2021-06-14 12:42:12 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1133)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products/1" for ::1 at 2021-06-14 12:42:17 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:32
+  Rendered products/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2550)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 9646)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 2.9ms | Allocations: 10741)
+
+
+Started GET "/" for ::1 at 2021-06-14 12:42:24 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 9465)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 1.1ms | Allocations: 9865)
+
+
