@@ -4,10 +4,13 @@
 ### Link your GitHub repository
 https://github.com/sainath123-del/MarketPlace-App 
 
+### A link (URL) to your deployed app (i.e. website)
+https://evening-savannah-64786.herokuapp.com
+
 
 ## Identification of the problem you are trying to solve by building this particular marketplace app.
 
-<<<<<<< HEAD
+
 The app which i am building is based on sports. I like to play one of the sport is cricket  
 =======
 The app which i am building is based on sports. I like to play one of the sport is cricket. Cricket is a passion for all youth. For those who like to play cricket this app will help to buy cricket equipment in reasonable price and they can sell there equipment which they dont need.
