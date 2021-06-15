@@ -49342,3 +49342,5 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 3.3ms | Allocations: 11601)
 
 
+  [1m[35m (266.0ms)[0m  [1m[35mCREATE DATABASE "MarketPlace-App_development" ENCODING = 'unicode'[0m
+  [1m[35m (133.3ms)[0m  [1m[35mCREATE DATABASE "marketplace-App_test" ENCODING = 'unicode'[0m

@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 subject(:user){
   described_class.new (
-    email: 'ajay@gmail.com',
-    password: 'password',
-    username: 'ajay'
+    email = 'ajay@gmail.com',
+    password = 'ajay123',
+    username = 'ajay'
   )
 }
  
@@ -17,9 +17,19 @@ describe 'validaton' do
     user.username = nil 
     expect(user).to_not be_valid
   end 
-  it 'should be invalid without email'
-  it 'should be invalid without password'
-  it 'should be invalid with a password shorter than 7 characters'
+  it 'should be invalid without email' do
+    user.email = nil
+    expect(user).to_not be_valid
+  end 
+  it 'should be invalid without password' do
+    user.password = nil 
+    expect(user).to_not be_valid
+  end
+
+  it 'should be invalid with a password shorter than 7 characters' do 
+    user.password = '1'
+    expect(user).to_not be_valid 
+  end
   it 'should be invalid with an email in the wrong format'
   it 'should check that emails are unique'
   it 'should check that username is unique'
