@@ -38,28 +38,28 @@ class ProductsController < ApplicationController
   end
 
   def show
-    stripe_session = Stripe: :Checkout: :Session.create(
-   payment_method_typs: ['card'],
-   client_reference_is: current_user.id,
-   customer_email: current_user.email,
-   line_items: [{ 
-     amount: (@product.price * 100).to_i,
-     name: @product.name,
-     description: @product.description,
-     currency: 'aud',
-     quantity: 1
-   }],
-   payment_intent_data: {
-     metadata: {
-       product_id: @product_id,
-       user_id: current_user.id
-     }
-   },
-   success_url: "#{root_url}/purchases/success?productId=#{@product.id}", 
-   cancel_url: "#{root_url}products"
-    )
+  #   stripe_session = Stripe::Checkout::Session.create(
+  #  payment_method_typs: ['card'],
+  #  client_reference_id: current_user ? current_user.id : nil,
+  #     customer_email: current_user ? current_user.email : nil,
+  #  line_items:[{ 
+  #    amount: (@product.price * 100).to_i,
+  #    name: @product.name,
+  #    description: @product.description,
+  #    currency: 'aud',
+  #    quantity: 1
+  #  }],
+  #  payment_intent_data: {
+  #    metadata: {
+  #      product_id: @product_id,
+  #      user_id: current_user ? current_user.id : nil
+  #     }
+  #  },
+  #  success_url: "#{root_url}/purchases/success?productId=#{@product.id}", 
+  #  cancel_url: "#{root_url}products"
+  #   )
 
-    @session_id = stripe_session.id
+  #   @session_id = stripe_session.id
 
   end
 
