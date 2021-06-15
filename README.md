@@ -117,14 +117,7 @@ The Devise gem itself does not discriminate between a buyer and a seller; this i
 
  
 ## Third party services used
-# AWS 
- AWS S3 is an amazon sever used to store the data or images
-# Postgresql 
-Postgresql is used for to store the data in datbase management system
-# Bootstrap 
-Bootstrap is used for to create a responsive web site design by using Nav bar, html and css
-# Devise
-This is used for encrpt the password 
+Third party services used in this app is Amazon Web Service S3.This is where all of the images that are uploaded to this app.The purpose of using Amazon S3, is to make for the best user experience possible. Having an app that operates fast is vital, as users want to get what they want at a resonable pace. Making use of Amazon S3 makes sure that the site will stay at a good quality speed, allowing for the best possible user experience.
 
  
 
