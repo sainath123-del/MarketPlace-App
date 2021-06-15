@@ -13,12 +13,12 @@ https://mighty-woodland-13995.herokuapp.com/
 
 The app which i am building is based on sports. I like to play one of the sport is cricket  
 =======
-The app which i am building is based on sports. I like to play one of the sport is cricket. Cricket is a passion for all youth. For those who like to play cricket this app will help to buy cricket equipment in reasonable price and they can sell there equipment which they dont need.
+By creating marketplace cricket app, I am solving the problem who has interest in sports. Where user can add there own product for sale and user can buy new diffirent product from this app. 
 
 
 ## Why is it a problem that needs solving?
 
-People who like to play cricket they will always looks for something different where they find online instead of going to shop. They can sell the unwanted things with good price and the important thing is they can update their products.
+People who like to play cricket they will always looks for something different where they find online instead of going to shop. They can sell the unwanted things with good price and the important thing is they can update their products
 
 
 
@@ -45,6 +45,12 @@ This app is two sided marketplace app where user can sell their product and buy 
 
 <img width="589" alt="Home page" src="https://user-images.githubusercontent.com/79548205/120635642-0d381700-c4b0-11eb-8b97-041ff011d067.png">
 
+<img width="1440" alt="Screen Shot 2021-06-15 at 7 34 41 pm" src="https://user-images.githubusercontent.com/79548205/122030212-ed3e1700-ce10-11eb-8be5-195078b4d227.png">
+
+<img width="1440" alt="Screen Shot 2021-06-15 at 7 35 17 pm" src="https://user-images.githubusercontent.com/79548205/122030229-f0d19e00-ce10-11eb-9789-9353bb7fba94.png">
+
+<img width="1436" alt="Screen Shot 2021-06-15 at 7 31 21 pm" src="https://user-images.githubusercontent.com/79548205/122029614-5c673b80-ce10-11eb-897f-4b33dde12645.png">
+
 
 
 - Target audience
@@ -62,10 +68,17 @@ This app is two sided marketplace app where user can sell their product and buy 
  ## User stories for your app
   # Before signUp
   
- User can see all the cricket equipment on the market.
- 
- User need to signIn to get access for products.
- 
+  
+  A User need to signup and sign in user can see all the product of which is related to cricket.
+  A User can buy and sell multiple items, only if they are logged in.
+  A User can upload an image when creating a product.
+  A User can click on an item and see more details about the listed item. Price, description.
+  A User can log in and out of their account. There is an option to tick a 'remember me' option,         making user experience much better.
+  A User can see what items they have listed to sell on via their profile page.
+  A User can see the items they have purchased on their profile page.
+
+  
+
  # Buyer
  
  User can view all the product on the market.
@@ -88,9 +101,11 @@ This app is two sided marketplace app where user can sell their product and buy 
  <img width="629" alt="Add Product" src="https://user-images.githubusercontent.com/79548205/120635668-16c17f00-c4b0-11eb-8f05-88a01b953e8c.png">
  <img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
  
+ ## Discuss the database relations to be implemented in your application
+The data base is a relational database, as shown in the ERD. The information in one table is related to the information in the other tables, and relies on the data from each. Taking this into consideration the relationships, I had to make sure that each table only held the relevant information and required on the information that it needed.
+The MVC Model database is a great template and will be used for any future designs or apps which I work on.
  
- 
- ## An ERD for your app
+ ## An ERD for your app 
 
  
  <img width="729" alt="Screen Shot 2021-06-03 at 9 33 21 pm" src="https://user-images.githubusercontent.com/79548205/120638382-63f32000-c4b3-11eb-813c-b7bf1a5beb14.png">
@@ -104,14 +119,7 @@ The Devise gem itself does not discriminate between a buyer and a seller; this i
 
  
 ## Third party services used
-# AWS 
- AWS S3 is an amazon sever used to store the data or images
-# Postgresql 
-Postgresql is used for to store the data in datbase management system
-# Bootstrap 
-Bootstrap is used for to create a responsive web site design by using Nav bar, html and css
-# Devise
-This is used for encrpt the password 
+Third party services used in this app is Amazon Web Service S3.This is where all of the images that are uploaded to this app.The purpose of using Amazon S3, is to make for the best user experience possible. Having an app that operates fast is vital, as users want to get what they want at a resonable pace. Making use of Amazon S3 makes sure that the site will stay at a good quality speed, allowing for the best possible user experience.
 
  
 
@@ -171,13 +179,16 @@ User must have a valid email for signup. user can't use one email for two accoun
 
 
 
-<img width="641" alt="sechma 1" src="https://user-images.githubusercontent.com/79548205/120630047-c6472300-c4a9-11eb-871b-0ffb087cc618.png">
+<img width="1365" alt="Screen Shot 2021-06-15 at 4 08 57 pm" src="https://user-images.githubusercontent.com/79548205/122001775-2a47e080-cdf4-11eb-9ee2-5aefc26f7e81.png">
 
 
-<img width="1409" alt="Screen Shot 2021-06-03 at 10 20 31 pm" src="https://user-images.githubusercontent.com/79548205/120643830-fbf40800-c4b9-11eb-94d6-f66edbfe60ad.png">
+<img width="1354" alt="Screen Shot 2021-06-15 at 4 09 12 pm" src="https://user-images.githubusercontent.com/79548205/122001786-2f0c9480-cdf4-11eb-82dd-58b46190d091.png">
 
 
-<img width="582" alt="Schema 3" src="https://user-images.githubusercontent.com/79548205/120630153-e24ac480-c4a9-11eb-87e1-f21e6269073f.png">
+<img width="1354" alt="Screen Shot 2021-06-15 at 4 09 20 pm" src="https://user-images.githubusercontent.com/79548205/122001790-303dc180-cdf4-11eb-92a8-5e6d331764e7.png">
 
+## Describe the way tasks are allocated and tracked in your project
+ Throughout the project, I learned Devise is a gem that comes standard with Rails. It used for Authentication and Authorisation for the app. It generates a model and views to deal with a user signing up for an account and then only letting authorised users commit actions to content created by a user with in the app. It achieves this by keeping track of there ID within the database and comparing it to the content owners ID, denying access to unauthorised users.
 
->>>>>>> 02ec51f687cce3667fffb70fa146c810dd9ef181
+PostgreSQL
+Postgres is a relational database. It is very useful for making sure all the data that is required is available when we need it. it is also very easy to create clear relationships between different tables of information. This in effect makes it very easy to call for information related to other information with in the app. for example how created a product and who bought it.
