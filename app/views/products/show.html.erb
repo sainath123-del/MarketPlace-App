@@ -27,6 +27,8 @@
          
 
         </ul>
+          <%= button_tag "Purchase for #{number_to_currency(@product.price)}", class:"btn btn-outline-success" %>
+
 
 
 <% @product.ratings.each do |rating|%>

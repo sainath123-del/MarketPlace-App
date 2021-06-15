@@ -49226,3 +49226,119 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 13906)
 
 
+Started GET "/products/1" for ::1 at 2021-06-15 10:53:24 +1000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (42.0ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:34
+  Rendered products/show.html.erb within layouts/application (Duration: 515.0ms | Allocations: 376688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 16.1ms | Allocations: 6605)
+  Rendered layout layouts/application.html.erb (Duration: 551.3ms | Allocations: 390842)
+Completed 200 OK in 634ms (Views: 502.7ms | ActiveRecord: 102.6ms | Allocations: 403078)
+
+
+Started DELETE "/products/1" for ::1 at 2021-06-15 10:53:30 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1132)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products/1" for ::1 at 2021-06-15 10:53:31 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (1.1ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/products/show.html.erb:34
+  Rendered products/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.0ms | Allocations: 1056)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 10844)
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 4.8ms | Allocations: 12111)
+
+
+Started GET "/" for ::1 at 2021-06-15 10:53:34 +1000
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:3
+  Rendered products/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 4.2ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 10650)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 2.5ms | Allocations: 11186)
+
+
+Started GET "/products/16" for ::1 at 2021-06-15 10:53:35 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/views/products/show.html.erb:34
+  Rendered products/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.2ms | Allocations: 1015)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 10590)
+Completed 200 OK in 26ms (Views: 17.8ms | ActiveRecord: 4.0ms | Allocations: 12378)
+
+
+Started DELETE "/products/16" for ::1 at 2021-06-15 10:53:39 +1000
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"16"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1169)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/products_controller.rb:29:in `destroy'
+Started GET "/products/16" for ::1 at 2021-06-15 10:53:40 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:81:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Product"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/products/show.html.erb:7
+  [1m[36mRating Load (0.8ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" WHERE "ratings"."product_id" = $1[0m  [["product_id", 16]]
+  ↳ app/views/products/show.html.erb:34
+  Rendered products/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_nav.html.erb:13
+  Rendered shared/_nav.html.erb (Duration: 2.3ms | Allocations: 1015)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10482)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 3.3ms | Allocations: 11601)
+
+
