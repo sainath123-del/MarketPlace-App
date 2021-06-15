@@ -187,5 +187,8 @@ User must have a valid email for signup. user can't use one email for two accoun
 
 <img width="1354" alt="Screen Shot 2021-06-15 at 4 09 20 pm" src="https://user-images.githubusercontent.com/79548205/122001790-303dc180-cdf4-11eb-92a8-5e6d331764e7.png">
 
+## Describe the way tasks are allocated and tracked in your project
+ Throughout the project, I learned Devise is a gem that comes standard with Rails. It used for Authentication and Authorisation for the app. It generates a model and views to deal with a user signing up for an account and then only letting authorised users commit actions to content created by a user with in the app. It achieves this by keeping track of there ID within the database and comparing it to the content owners ID, denying access to unauthorised users.
 
->>>>>>> 02ec51f687cce3667fffb70fa146c810dd9ef181
+PostgreSQL
+Postgres is a relational database. It is very useful for making sure all the data that is required is available when we need it. it is also very easy to create clear relationships between different tables of information. This in effect makes it very easy to call for information related to other information with in the app. for example how created a product and who bought it.
