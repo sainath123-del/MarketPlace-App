@@ -103,6 +103,7 @@ This app is two sided marketplace app where user can sell their product and buy 
  
  ## Discuss the database relations to be implemented in your application
 The data base is a relational database, as shown in the ERD. The information in one table is related to the information in the other tables, and relies on the data from each. Taking this into consideration the relationships, I had to make sure that each table only held the relevant information and required on the information that it needed.
+The MVC Model database is a great template and will be used for any future designs or apps which I work on.
  
  ## An ERD for your app 
 
