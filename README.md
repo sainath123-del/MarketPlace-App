@@ -101,9 +101,10 @@ This app is two sided marketplace app where user can sell their product and buy 
  <img width="629" alt="Add Product" src="https://user-images.githubusercontent.com/79548205/120635668-16c17f00-c4b0-11eb-8f05-88a01b953e8c.png">
  <img width="702" alt="ProductImage" src="https://user-images.githubusercontent.com/79548205/120630285-073f3780-c4aa-11eb-844f-2c6329a0747a.png">
  
+ ## Discuss the database relations to be implemented in your application
+The data base is a relational database, as shown in the ERD. The information in one table is related to the information in the other tables, and relies on the data from each. Taking this into consideration the relationships, I had to make sure that each table only held the relevant information and required on the information that it needed.
  
- 
- ## An ERD for your app
+ ## An ERD for your app 
 
  
  <img width="729" alt="Screen Shot 2021-06-03 at 9 33 21 pm" src="https://user-images.githubusercontent.com/79548205/120638382-63f32000-c4b3-11eb-813c-b7bf1a5beb14.png">
