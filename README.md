@@ -171,13 +171,13 @@ User must have a valid email for signup. user can't use one email for two accoun
 
 
 
-<img width="641" alt="sechma 1" src="https://user-images.githubusercontent.com/79548205/120630047-c6472300-c4a9-11eb-871b-0ffb087cc618.png">
+<img width="1365" alt="Screen Shot 2021-06-15 at 4 08 57 pm" src="https://user-images.githubusercontent.com/79548205/122001775-2a47e080-cdf4-11eb-9ee2-5aefc26f7e81.png">
 
 
-<img width="1409" alt="Screen Shot 2021-06-03 at 10 20 31 pm" src="https://user-images.githubusercontent.com/79548205/120643830-fbf40800-c4b9-11eb-94d6-f66edbfe60ad.png">
+<img width="1354" alt="Screen Shot 2021-06-15 at 4 09 12 pm" src="https://user-images.githubusercontent.com/79548205/122001786-2f0c9480-cdf4-11eb-82dd-58b46190d091.png">
 
 
-<img width="582" alt="Schema 3" src="https://user-images.githubusercontent.com/79548205/120630153-e24ac480-c4a9-11eb-87e1-f21e6269073f.png">
+<img width="1354" alt="Screen Shot 2021-06-15 at 4 09 20 pm" src="https://user-images.githubusercontent.com/79548205/122001790-303dc180-cdf4-11eb-92a8-5e6d331764e7.png">
 
 
 >>>>>>> 02ec51f687cce3667fffb70fa146c810dd9ef181
