@@ -13,12 +13,12 @@ https://mighty-woodland-13995.herokuapp.com/
 
 The app which i am building is based on sports. I like to play one of the sport is cricket  
 =======
-The app which i am building is based on sports. I like to play one of the sport is cricket. Cricket is a passion for all youth. For those who like to play cricket this app will help to buy cricket equipment in reasonable price and they can sell there equipment which they dont need.
+By creating marketplace cricket app, I am solving the problem who has interest in sports. Where user can add there own product for sale and user can buy new diffirent product from this app. 
 
 
 ## Why is it a problem that needs solving?
 
-People who like to play cricket they will always looks for something different where they find online instead of going to shop. They can sell the unwanted things with good price and the important thing is they can update their products.
+People who like to play cricket they will always looks for something different where they find online instead of going to shop. They can sell the unwanted things with good price and the important thing is they can update their products
 
 
 
@@ -62,10 +62,17 @@ This app is two sided marketplace app where user can sell their product and buy 
  ## User stories for your app
   # Before signUp
   
- User can see all the cricket equipment on the market.
- 
- User need to signIn to get access for products.
- 
+  
+  A User need to signup and sign in user can see all the product of which is related to cricket.
+  A User can buy and sell multiple items, only if they are logged in.
+  A User can upload an image when creating a product.
+  A User can click on an item and see more details about the listed item. Price, description.
+  A User can log in and out of their account. There is an option to tick a 'remember me' option,         making user experience much better.
+  A User can see what items they have listed to sell on via their profile page.
+  A User can see the items they have purchased on their profile page.
+
+  
+
  # Buyer
  
  User can view all the product on the market.
