@@ -45,6 +45,10 @@ This app is two sided marketplace app where user can sell their product and buy 
 
 <img width="589" alt="Home page" src="https://user-images.githubusercontent.com/79548205/120635642-0d381700-c4b0-11eb-8b97-041ff011d067.png">
 
+<img width="1440" alt="Screen Shot 2021-06-15 at 7 34 41 pm" src="https://user-images.githubusercontent.com/79548205/122030212-ed3e1700-ce10-11eb-8be5-195078b4d227.png">
+
+<img width="1440" alt="Screen Shot 2021-06-15 at 7 35 17 pm" src="https://user-images.githubusercontent.com/79548205/122030229-f0d19e00-ce10-11eb-9789-9353bb7fba94.png">
+
 <img width="1436" alt="Screen Shot 2021-06-15 at 7 31 21 pm" src="https://user-images.githubusercontent.com/79548205/122029614-5c673b80-ce10-11eb-897f-4b33dde12645.png">
 
 
